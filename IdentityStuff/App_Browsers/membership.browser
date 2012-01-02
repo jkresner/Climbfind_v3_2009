@@ -1,0 +1,10 @@
+﻿<browsers>
+  <browser refID="Default">
+    <controlAdapters>
+      <adapter controlType="System.Web.UI.WebControls.Login" adapterType="ClimbFind.Web.UI.Adapters.LoginControlAdapter"  />
+      <adapter controlType="System.Web.UI.WebControls.PasswordRecovery" adapterType="ClimbFind.Web.UI.Adapters.PasswordRecoveryControlAdapter"  />
+      <adapter controlType="System.Web.UI.WebControls.CreateUserWizard" adapterType="ClimbFind.Web.UI.Adapters.CreateUserWizardControlAdapter"  />
+      <adapter controlType="System.Web.UI.WebControls.ChangePassword" adapterType="ClimbFind.Web.UI.Adapters.ChangePasswordControlAdapter"  />
+    </controlAdapters>
+  </browser>
+</browsers>

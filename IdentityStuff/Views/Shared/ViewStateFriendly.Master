@@ -1,0 +1,13 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ViewStateFriendly.Master.cs" Inherits="ClimbFind.Web.Mvc.Views.Shared.ViewStateFriendly" %>
+<%= Html.RenderUserControl("~/Views/Shared/Head.ascx") %>
+<body>
+<%= Html.RenderUserControl("~/Views/Shared/Header.ascx") %>
+<div id="content-wrap" style="background-image:none">
+	<div id="content">	  
+        <asp:ContentPlaceHolder ID="m" runat="server"></asp:ContentPlaceHolder>                
+	</div>
+</div>
+<div style="clear:both;height:2px;border:none;background:white"></div> 
+<%= Html.RenderUserControl("~/Views/Shared/Footer.ascx") %>
+</body>
+</html>

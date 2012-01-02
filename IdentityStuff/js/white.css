@@ -1,0 +1,212 @@
+html, body {
+	margin:0;
+	padding:0;
+}
+body{
+	text-align: center;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
+	background-color: #eee;
+	color: #444;
+	font-size: 75%;
+}
+a{
+	color: #27D;
+	text-decoration: none;
+}
+a:focus, a:hover, a:active {
+	text-decoration: underline;
+}
+p, li {
+	line-height: 1.8em;
+}
+h1, h2 {
+	font-family: "Trebuchet MS", Verdana, sans-serif;
+	margin: 0;
+}
+h1 {
+	padding: 0;
+	font-size:3em;
+	color: #333;
+	letter-spacing:-1px;
+}
+h2 {
+	padding-top: 10px;
+	font-size:2em;
+	letter-spacing:-1px;
+}
+pre {
+	font-size: 1.2em;
+	line-height: 1.2em;
+}
+div#page {
+	width: 900px;
+	background-color: #fff;
+	margin: 0 auto;
+	text-align: left;
+	border-color: #ddd;
+	border-style: none solid solid;
+	border-width: medium 1px 1px;
+}
+div#container {
+	padding: 20px;
+}
+div#ads {
+	clear: both;
+	padding: 12px 0 12px 66px;
+}
+div#footer {
+	clear: both;
+	color: #777;
+	margin: 0 auto;
+	padding: 20px 0 40px;
+	text-align: center;
+}
+h2.album-date {
+	margin-top: 6px;
+}
+p.album-description {
+	margin-top: 20px;
+}
+div.meta {
+	margin-top: 10px;
+	font-size: 0.8em;
+}
+div.meta ul {
+	margin: 0;
+	padding: 0;
+}
+div.meta li {
+	float: left;
+	padding: 0;
+	margin-right: 10px;
+	width: 240px;
+	list-style: none;
+}
+
+div.content {
+	/* The display of content is enabled by a javascript generated style on the page.
+	   This is so that the slideshow content won't display unless javascript is enabled. */
+	display: none;
+	float:right;
+	width:550px; 
+}
+div.content a, div.navigation a {
+	text-decoration: none;
+	color: #777;
+}
+div.content  a:focus, div.content  a:hover, div.content  a:active {
+	text-decoration: underline;
+}
+div.controls {
+	margin-top: 5px;
+	height: 23px;
+}
+div.controls a {
+	padding: 5px;
+}
+div.ss-controls {
+	float: left;
+}
+div.nav-controls {
+	float: right;
+}
+
+div.loader {
+	background-image: url('images/loader.gif');
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 550px;
+	height: 350px
+}
+div.slideshow {
+	clear: both;
+}
+div.slideshow span.image-wrapper {
+	float: left;
+	padding-bottom: 12px;
+}
+div.slideshow a.advance-link {
+	padding: 2px;
+	display: block;
+	border: 1px solid #ccc;
+}
+div.slideshow img {
+	border: none;
+	display: block;
+}
+div.download {
+	float: right;
+}
+div.embox {
+	clear: both;
+	border: 1px solid #ccc;
+	background-color: #eee;
+	padding: 12px;
+}
+div.image-title {
+	font-weight: bold;
+	font-size: 1.4em;
+}
+
+div.image-desc {
+	line-height: 1.3em;
+	padding-top: 12px;
+}
+div.navigation {
+	/* The navigation style is set by a javascript generated style on the page.
+	   This is so that the javascript specific styles won't be applied unless javascript is enabled. */
+}
+ul.thumbs {
+	clear: both;
+	margin: 0;
+	padding: 0;
+}
+ul.thumbs li {
+	float: left;
+	padding: 0;
+	margin: 5px 10px 5px 0;
+	list-style: none;
+	text-align: center;
+}
+a.thumb {
+	padding: 2px;
+	display: block;
+	border: 1px solid #ccc;
+}
+ul.thumbs li.selected a.thumb {
+	background: #000;
+}
+a.thumb:focus {
+	outline: none;
+}
+ul.thumbs img {
+	border: none;
+	display: block;
+}
+div.pagination {
+	clear: both;
+}
+div.navigation div.top {
+	margin-bottom: 12px;
+	height: 11px;
+}
+div.navigation div.bottom {
+	margin-top: 12px;
+}
+div.pagination a, div.pagination span.current {
+	display: block;
+	float: left;
+	margin-right: 2px;
+	padding: 4px 7px 2px 7px;
+	border: 1px solid #ccc;
+}
+div.pagination a:hover {
+	background-color: #eee;
+	text-decoration: none;
+}
+div.pagination span.current {
+	font-weight: bold;
+	background-color: #000;
+	border-color: #000;
+	color: #fff;
+}

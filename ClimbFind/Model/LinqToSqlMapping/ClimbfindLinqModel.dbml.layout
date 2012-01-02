@@ -1,0 +1,609 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 20.625, 51.125" name="ClimbfindLinqModel">
+  <DataContextMoniker Name="/ClimbfindLinqModelDataContext" />
+  <nestedChildShapes>
+    <classShape Id="1eaec9c6-474f-4f91-8155-67404172ba5f" absoluteBounds="6.25, 32.125, 2, 1.7535424804687523">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/Advertisement" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cb6793b0-b58c-435c-9433-81d4fbf9d70c" absoluteBounds="6.265, 32.585, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1b7c75aa-b577-4b2d-a35f-848d36cb98cf" absoluteBounds="3.5, 38.375, 2, 1.2605004882812523">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/AdvertisementCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e1f848cc-8f1a-401f-8401-53ee7a5b48ec" absoluteBounds="3.515, 38.835, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3566f6e0-83c1-46a3-91d9-ae2cffa369bd" absoluteBounds="6.5, 34.5, 2, 2.2465844726562523">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/AreaTag" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ede75bcf-c441-490a-a0a6-b1c74240e688" absoluteBounds="6.515, 34.96, 1.9700000000000002, 1.68658447265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f21883ae-3a88-4dbb-a062-a707e91c5f52" absoluteBounds="3.5, 29.375, 2, 3.39701578776042">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/ClimberProfile" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0af9d056-0807-4efb-9ba9-5d0894a0bd8c" absoluteBounds="3.515, 29.835, 1.9700000000000002, 2.8370157877604165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e913696a-1de1-4930-aaa1-575f5ea93b8e" absoluteBounds="6.25, 42.25, 2, 3.0683211263020809">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/ClimberProfileExtended" />
+      <nestedChildShapes>
+        <elementListCompartment Id="04d44dc1-6d60-4237-bbf4-15188031a9b5" absoluteBounds="6.265, 42.71, 1.9700000000000002, 2.508321126302083" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5563745f-9bfb-4d8b-96a0-a156576ec58a" absoluteBounds="0.75, 4.75, 2, 1.2605004882812505">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/ClimberProfilePartnerStatus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f492bc5f-687c-4cf1-b2e6-9f9f2f729f25" absoluteBounds="0.765, 5.21, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4b23780b-78f0-41e7-bada-024db35f99f0" absoluteBounds="6.25, 38.625, 2, 2.9039737955729095">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/Club" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6d9e3ac4-5a88-4306-ad7a-0a1fb1ceafed" absoluteBounds="6.265, 39.085, 1.9700000000000002, 2.3439737955729165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="107e0d3e-0aa4-4100-8401-96c6a744904b" absoluteBounds="9, 41.5, 2, 1.0961531575520809">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/ClubInArea" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f1216498-3aa7-455f-881f-7e232888b0aa" absoluteBounds="9.015, 41.96, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="21eda8cb-fa51-4634-bfb3-991146813220" absoluteBounds="3.5, 40.5, 2, 3.3970157877604095">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/Competition" />
+      <nestedChildShapes>
+        <elementListCompartment Id="63526c43-cf03-4463-972b-47ccb9ba645e" absoluteBounds="3.515, 40.96, 1.9700000000000002, 2.8370157877604165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="239094ef-7a77-49b3-b26e-78b30151d0ef" absoluteBounds="3.5, 25.75, 2, 2.4109318033854166">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/FeatureArticle" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e580841d-dfc5-4859-a280-0f4f095bd62d" absoluteBounds="3.515, 26.21, 1.9700000000000002, 1.8509318033854165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7955d1b3-79e8-47b4-b017-2fbf684b5acd" absoluteBounds="6.25, 26.25, 2, 1.4248478190104166">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/FeatureArticlePhotoSet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c2f14da0-5c0e-41e2-b036-753389febfc6" absoluteBounds="6.265, 26.71, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="11483b3c-3460-46e1-b4c4-52df217ce83b" absoluteBounds="4.25, 17.25, 2, 2.0822371419270809">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/Feedback" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b8ad7bcb-2f09-483f-9ebe-07037ce796cf" absoluteBounds="4.265, 17.71, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5679c822-b2e2-40dd-baf3-2fdaff9f195d" absoluteBounds="3.75, 4.75, 2, 1.7535424804687505">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/LogEvent" />
+      <nestedChildShapes>
+        <elementListCompartment Id="016187f6-0729-48a1-9529-52dc3fdd3932" absoluteBounds="3.765, 5.21, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fc930a2b-41ff-4da6-9eed-30c6f46c7e02" absoluteBounds="6.75, 4.75, 2, 2.5752791341145826">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/LogExceptionEvent" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a7783d90-ef37-42f4-8df6-9c2e3a630b10" absoluteBounds="6.765, 5.21, 1.9700000000000002, 2.015279134114583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3593b6e3-9944-4b5b-a1f8-63f74c8d0070" absoluteBounds="0.75, 7.75, 2, 1.0961531575520844">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/MainNewsFeedItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4277afe8-e7c0-4178-8032-e2c283bb5c09" absoluteBounds="0.765, 8.21, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1c098dd0-5487-47dd-9d12-36cd5254acff" absoluteBounds="10.125, 31.5, 2, 2.0822371419270809">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/MediaShare" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4a281591-c898-4250-9b81-dd9175ff3617" absoluteBounds="10.14, 31.96, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4b84c130-7e14-45f5-8517-40dc7e1e3b34" absoluteBounds="9, 29.875, 2, 1.0961531575520809">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/MessageBoard" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4c6c06d7-05be-47ac-b71a-f1465cd4d0e6" absoluteBounds="9.015, 30.335, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5cdcee4c-1cc2-43cf-8036-7cf4d1c383fd" absoluteBounds="6.25, 29.75, 2, 1.5891951497395809">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/MessageBoardMessage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bdc2d98e-bcf9-4013-aae7-e523f54afbf3" absoluteBounds="6.265, 30.21, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c1f99b94-46ab-4ba7-b1aa-89277caafa56" absoluteBounds="14.25, 30.875, 2, 1.0961531575520809">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/OutdoorCragMediaShare" />
+      <nestedChildShapes>
+        <elementListCompartment Id="41496ba9-1ab6-4bb1-bf2e-c186377d9687" absoluteBounds="14.265, 31.335, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5351c42c-97a8-4c02-890c-7e85998e2ee8" absoluteBounds="14.75, 41.25, 2, 1.0961531575520809">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/PartnerCallPlace" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d8486bf4-b941-4809-9477-da28ef628f31" absoluteBounds="14.765, 41.71, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c76d333c-1123-446c-8881-d3fd164c5204" absoluteBounds="15, 33, 2, 1.7535424804687523">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/PartnerCallReply" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e4a352ae-c9ae-4634-b7ec-3a96a34790ee" absoluteBounds="15.015, 33.46, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="23981d69-1df4-41d1-8493-03e7e7acb4b7" absoluteBounds="16.375, 35, 2, 1.5891951497395809">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/PartnerCallSubscription" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5e9a8ea2-cdcc-407f-b090-c26e1a63fdf1" absoluteBounds="16.39, 35.46, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5d5448d2-6b26-4948-8e57-09c332518077" absoluteBounds="9, 48.375, 2, 2.4109318033854095">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/PlaceIndoorDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="09c7cb02-be79-4428-b137-9360e0a792ac" absoluteBounds="9.015, 48.835, 1.9700000000000002, 1.8509318033854165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e541221c-ab85-4944-9bb4-731c74cc02b9" absoluteBounds="12, 42, 2, 1.0961531575520809">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/PlaceMediaShare" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7f9f91bd-177a-44c4-a52a-d2b6511a7df7" absoluteBounds="12.015, 42.46, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e93c8a83-bd0b-455e-82de-450802f0ee15" absoluteBounds="14.75, 38.625, 2, 1.4248478190104095">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/PlaceOutdoorAuthority" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e5b07e05-b456-4f46-9a6a-a961239da261" absoluteBounds="14.765, 39.085, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2ce8eccc-e9ce-42a9-a724-17829ea7094f" absoluteBounds="18.375, 25.75, 2, 6.5196150716145809">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/PlaceOutdoorCrag" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b5fcdc0b-957e-46cb-a1e1-6b8ddd9db0d2" absoluteBounds="18.39, 26.21, 1.9700000000000002, 5.959615071614583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8b227106-1e1c-4343-944c-e4bf313b9198" absoluteBounds="12, 37.875, 2, 3.0683211263020809">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/PlaceOutdoorDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dbb5069e-a2ad-4945-b346-3e9d45101ae6" absoluteBounds="12.015, 38.335, 1.9700000000000002, 2.508321126302083" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="76c9eb13-f22e-459c-8b9b-ee4d1ed865d5" absoluteBounds="9, 46.25, 2, 1.0961531575520809">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/PlacesInArea" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9d2ce2b6-66d8-4f6f-ab5e-9c06af7a011d" absoluteBounds="9.015, 46.71, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ecdd958c-25dd-4f9f-8d00-794c567f88f8" absoluteBounds="8.75, 2.75, 2, 1.0961531575520835">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/PlaceUserClimb" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8b93d5dd-3d9a-4327-89f1-4ca5d54cfadb" absoluteBounds="8.765, 3.21, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="296bbbeb-ff63-45db-8c4a-4225969e976d" absoluteBounds="3.75, 8.75, 2, 1.2605004882812487">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/SpecialPagesHTML" />
+      <nestedChildShapes>
+        <elementListCompartment Id="06a45c56-ef36-4887-89fa-8a478e6bb161" absoluteBounds="3.765, 9.21, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f31a61cd-ad96-4604-a071-1b26c015e56d" absoluteBounds="9, 34.875, 2, 1.0961531575520809">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/UserInClub" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1930265b-7d00-4a23-92a7-b2761136dadc" absoluteBounds="9.015, 35.335, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="40372c66-92a2-4968-8979-784cebaa51a0" absoluteBounds="6.75, 8.75, 2, 2.0822371419270844">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/UserMessage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="34004a39-7634-41f0-9098-f45352e207a9" absoluteBounds="6.765, 9.21, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6bdec7e4-bd21-4ac9-b6fa-2361f7f6b729" absoluteBounds="9.75, 4.75, 2, 1.7535424804687505">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/UserSetting" />
+      <nestedChildShapes>
+        <elementListCompartment Id="729c267f-b41b-4187-8615-2ed8ab302ec8" absoluteBounds="9.765, 5.21, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2f20beaa-60ae-421f-ba94-50293c5d7628" absoluteBounds="1.5, 36, 2, 1.4248478190104095">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/aspnet_Application" />
+      <nestedChildShapes>
+        <elementListCompartment Id="db24b71e-fad8-49a0-af54-471b330eee5c" absoluteBounds="1.5150000000000001, 36.46, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a73c6498-607e-40b4-87f9-4b1b85f0f7ec" absoluteBounds="0.75, 30.875, 2, 4.2187524414062523">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/aspnet_Membership" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0c2ac233-6d0d-4795-ba91-4c8c88c44ad0" absoluteBounds="0.765, 31.335, 1.9700000000000002, 3.65875244140625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="80b7b6d7-9613-441e-92a6-a508172b56ee" absoluteBounds="4.25, 20.875, 2, 1.5891951497395809">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/aspnet_Profile" />
+      <nestedChildShapes>
+        <elementListCompartment Id="87578a14-eadf-4a6c-8055-ce2a6272ab6b" absoluteBounds="4.265, 21.335, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="76110575-d743-4af6-82f6-6910b4511375" absoluteBounds="1.5, 22.125, 2, 1.9178898111979166">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/aspnet_User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="417b4684-ea33-444c-a3a5-0fc6fb058ab7" absoluteBounds="1.5150000000000001, 22.585, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 38.3759686157602); (5.56607443490112 : 38.3098941808591 : JumpStart); (5.68392556509888 : 38.1920430506613 : JumpEnd); (5.875 : 38.0009686157602); (5.875 : 33.0017712402344); (6.25 : 33.0017712402344)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/AdvertisementCategory/AdvertisementCategory_Advertisement" />
+      <nodes>
+        <classShapeMoniker Id="1b7c75aa-b577-4b2d-a35f-848d36cb98cf" />
+        <classShapeMoniker Id="1eaec9c6-474f-4f91-8155-67404172ba5f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 32.4485078938802); (6.25 : 32.4485078938802)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/ClimberProfile/ClimberProfile_Advertisement" />
+      <nodes>
+        <classShapeMoniker Id="f21883ae-3a88-4dbb-a062-a707e91c5f52" />
+        <classShapeMoniker Id="1eaec9c6-474f-4f91-8155-67404172ba5f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 32.770476326222); (5.56607443490112 : 32.8365507611231 : JumpStart); (5.68392556509888 : 32.9544018913209 : JumpEnd); (5.81607443490112 : 33.0865507611231 : JumpStart); (5.93392556509888 : 33.2044018913209 : JumpEnd); (6.125 : 33.395476326222); (6.125 : 43.784160563151); (6.25 : 43.784160563151)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/ClimberProfile/ClimberProfile_ClimberProfileExtended" />
+      <nodes>
+        <classShapeMoniker Id="f21883ae-3a88-4dbb-a062-a707e91c5f52" />
+        <classShapeMoniker Id="e913696a-1de1-4930-aaa1-575f5ea93b8e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 32.7212455569912); (5.9375 : 33.1587455569912); (5.9375 : 40.0769868977865); (6.25 : 40.0769868977865)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/ClimberProfile/ClimberProfile_Club" />
+      <nodes>
+        <classShapeMoniker Id="f21883ae-3a88-4dbb-a062-a707e91c5f52" />
+        <classShapeMoniker Id="4b23780b-78f0-41e7-bada-024db35f99f0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.40625 : 36.7465844726563); (8.40625 : 41.8894868977865); (9 : 41.8894868977865)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/AreaTag/AreaTag_ClubInArea" />
+      <nodes>
+        <classShapeMoniker Id="3566f6e0-83c1-46a3-91d9-ae2cffa369bd" />
+        <classShapeMoniker Id="107e0d3e-0aa4-4100-8401-96c6a744904b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 41.1383470748698); (8.35416729166667 : 41.1383470748698 : JumpStart); (8.55208458333334 : 41.1383470748698 : JumpEnd); (9.09375 : 41.1383470748698); (9.09375 : 41.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/Club/Club_ClubInArea" />
+      <nodes>
+        <classShapeMoniker Id="4b23780b-78f0-41e7-bada-024db35f99f0" />
+        <classShapeMoniker Id="107e0d3e-0aa4-4100-8401-96c6a744904b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 26.9624239095052); (6.25 : 26.9624239095052)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/FeatureArticle/FeatureArticle_FeatureArticlePhotoSet" />
+      <nodes>
+        <classShapeMoniker Id="239094ef-7a77-49b3-b26e-78b30151d0ef" />
+        <classShapeMoniker Id="7955d1b3-79e8-47b4-b017-2fbf684b5acd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 31.9736830354818); (10.125 : 31.9736830354818)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/ClimberProfile/ClimberProfile_MediaShare" />
+      <nodes>
+        <classShapeMoniker Id="f21883ae-3a88-4dbb-a062-a707e91c5f52" />
+        <classShapeMoniker Id="1c098dd0-5487-47dd-9d12-36cd5254acff" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.53125 : 30.9711531575521); (9.53125 : 29.53125025); (6.08333333333333 : 29.53125025 : JumpStart); (5.79166666666667 : 29.53125025 : JumpEnd); (5.5 : 29.53125025)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/MessageBoard/MessageBoard_ClimberProfile" />
+      <nodes>
+        <classShapeMoniker Id="4b84c130-7e14-45f5-8517-40dc7e1e3b34" />
+        <classShapeMoniker Id="f21883ae-3a88-4dbb-a062-a707e91c5f52" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9 : 30.423076578776); (8.5 : 30.423076578776); (8.5 : 31.5891951497396); (5.625 : 31.5891951497396); (5.625 : 40.125); (4.5 : 40.125); (4.5 : 40.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/MessageBoard/MessageBoard_Competition" />
+      <nodes>
+        <classShapeMoniker Id="4b84c130-7e14-45f5-8517-40dc7e1e3b34" />
+        <classShapeMoniker Id="21eda8cb-fa51-4634-bfb3-991146813220" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10 : 29.875); (10 : 25.96875); (5.5 : 25.96875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/MessageBoard/MessageBoard_FeatureArticle" />
+      <nodes>
+        <classShapeMoniker Id="4b84c130-7e14-45f5-8517-40dc7e1e3b34" />
+        <classShapeMoniker Id="239094ef-7a77-49b3-b26e-78b30151d0ef" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.5625 : 30.9711531575521); (10.5625 : 31.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/MessageBoard/MessageBoard_MediaShare" />
+      <nodes>
+        <classShapeMoniker Id="4b84c130-7e14-45f5-8517-40dc7e1e3b34" />
+        <classShapeMoniker Id="1c098dd0-5487-47dd-9d12-36cd5254acff" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 30.2922228773162); (6.25 : 30.2922228773162)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/ClimberProfile/ClimberProfile_MessageBoardMessage" />
+      <nodes>
+        <classShapeMoniker Id="f21883ae-3a88-4dbb-a062-a707e91c5f52" />
+        <classShapeMoniker Id="5cdcee4c-1cc2-43cf-8036-7cf4d1c383fd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9 : 30.086538289388); (8.25 : 30.086538289388)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/MessageBoard/MessageBoard_MessageBoardMessage" />
+      <nodes>
+        <classShapeMoniker Id="4b84c130-7e14-45f5-8517-40dc7e1e3b34" />
+        <classShapeMoniker Id="5cdcee4c-1cc2-43cf-8036-7cf4d1c383fd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(12.125 : 31.735576578776); (12.2838504166667 : 31.735576578776 : JumpStart); (12.4505170833333 : 31.735576578776 : JumpEnd); (13.4947941666667 : 31.735576578776 : JumpStart); (13.6614608333333 : 31.735576578776 : JumpEnd); (14.25 : 31.735576578776)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/MediaShare/MediaShare_OutdoorCragMediaShare" />
+      <nodes>
+        <classShapeMoniker Id="1c098dd0-5487-47dd-9d12-36cd5254acff" />
+        <classShapeMoniker Id="c1f99b94-46ab-4ba7-b1aa-89277caafa56" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 29.64062775); (13.4947941666667 : 29.64062775 : JumpStart); (13.6614608333333 : 29.64062775 : JumpEnd); (16.4166666666667 : 29.64062775 : JumpStart); (16.5833333333333 : 29.64062775 : JumpEnd); (16.65625 : 29.64062775); (16.65625 : 33)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/ClimberProfile/ClimberProfile_PartnerCallReply" />
+      <nodes>
+        <classShapeMoniker Id="f21883ae-3a88-4dbb-a062-a707e91c5f52" />
+        <classShapeMoniker Id="c76d333c-1123-446c-8881-d3fd164c5204" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 29.42187275); (5.79166666666667 : 29.42187275 : JumpStart); (5.95833333333333 : 29.42187275 : JumpEnd); (9.91666666666667 : 29.42187275 : JumpStart); (10.0833333333333 : 29.42187275 : JumpEnd); (16.4166666666667 : 29.42187275 : JumpStart); (16.5833333333333 : 29.42187275 : JumpEnd); (16.7760441666667 : 29.42187275 : JumpStart); (16.9427108333333 : 29.42187275 : JumpEnd); (17.6875 : 29.42187275); (17.6875 : 35)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/ClimberProfile/ClimberProfile_PartnerCallSubscription" />
+      <nodes>
+        <classShapeMoniker Id="f21883ae-3a88-4dbb-a062-a707e91c5f52" />
+        <classShapeMoniker Id="23981d69-1df4-41d1-8493-03e7e7acb4b7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.6562495 : 33.5822371419271); (11.6562495 : 42.8774031575521); (12 : 42.8774031575521)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/MediaShare/MediaShare_PlaceMediaShare" />
+      <nodes>
+        <classShapeMoniker Id="1c098dd0-5487-47dd-9d12-36cd5254acff" />
+        <classShapeMoniker Id="e541221c-ab85-4944-9bb4-731c74cc02b9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(18.375 : 31.423076578776); (16.9427108333333 : 31.423076578776 : JumpStart); (16.7760441666667 : 31.423076578776 : JumpEnd); (16.7395833333333 : 31.423076578776 : JumpStart); (16.4166666666667 : 31.423076578776 : JumpEnd); (16.25 : 31.423076578776)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/PlaceOutdoorCrag/PlaceOutdoorCrag_OutdoorCragMediaShare" />
+      <nodes>
+        <classShapeMoniker Id="2ce8eccc-e9ce-42a9-a724-17829ea7094f" />
+        <classShapeMoniker Id="c1f99b94-46ab-4ba7-b1aa-89277caafa56" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 32.1239678533654); (5.54166666666667 : 32.1239678533654 : JumpStart); (5.70833333333333 : 32.1239678533654 : JumpEnd); (5.75 : 32.1239678533654); (5.75 : 28.5705224236841); (5.79166666666667 : 28.5705224236841 : JumpStart); (5.95833333333333 : 28.5705224236841 : JumpEnd); (9.91666666666667 : 28.5705224236841 : JumpStart); (10.0833333333333 : 28.5705224236841 : JumpEnd); (16.4166666666667 : 28.5705224236841 : JumpStart); (16.5833333333333 : 28.5705224236841 : JumpEnd); (16.7760441666667 : 28.5705224236841 : JumpStart); (16.9427108333333 : 28.5705224236841 : JumpEnd); (17.6666666666667 : 28.5705224236841 : JumpStart); (17.8333333333333 : 28.5705224236841 : JumpEnd); (18.375 : 28.5705224236841)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/ClimberProfile/ClimberProfile_PlaceOutdoorCrag" />
+      <nodes>
+        <classShapeMoniker Id="f21883ae-3a88-4dbb-a062-a707e91c5f52" />
+        <classShapeMoniker Id="2ce8eccc-e9ce-42a9-a724-17829ea7094f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 29.375); (4.5 : 28.75); (9.91666666666667 : 28.75 : JumpStart); (10.0833333333333 : 28.75 : JumpEnd); (16.4166666666667 : 28.75 : JumpStart); (16.5833333333333 : 28.75 : JumpEnd); (16.7760441666667 : 28.75 : JumpStart); (16.9427108333333 : 28.75 : JumpEnd); (17.75 : 28.75); (17.75 : 27.1250005); (18.375 : 27.1250005)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/ClimberProfile/ClimberProfile_PlaceOutdoorCrag1" />
+      <nodes>
+        <classShapeMoniker Id="f21883ae-3a88-4dbb-a062-a707e91c5f52" />
+        <classShapeMoniker Id="2ce8eccc-e9ce-42a9-a724-17829ea7094f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 30.6461639498698); (5.875 : 30.6461639498698); (5.875 : 28.0561739095052); (9.91666666666667 : 28.0561739095052 : JumpStart); (10.0833333333333 : 28.0561739095052 : JumpEnd); (16.4166666666667 : 28.0561739095052 : JumpStart); (16.5833333333333 : 28.0561739095052 : JumpEnd); (16.7760441666667 : 28.0561739095052 : JumpStart); (16.9427108333333 : 28.0561739095052 : JumpEnd); (17.6666666666667 : 28.0561739095052 : JumpStart); (17.8333333333333 : 28.0561739095052 : JumpEnd); (18.375 : 28.0561739095052)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/ClimberProfile/ClimberProfile_PlaceOutdoorCrag2" />
+      <nodes>
+        <classShapeMoniker Id="f21883ae-3a88-4dbb-a062-a707e91c5f52" />
+        <classShapeMoniker Id="2ce8eccc-e9ce-42a9-a724-17829ea7094f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 31.1489320498047); (6 : 31.1489320498047); (6 : 28.908912432636); (9.91666666666667 : 28.908912432636 : JumpStart); (10.0833333333333 : 28.908912432636 : JumpEnd); (16.4166666666667 : 28.908912432636 : JumpStart); (16.5833333333333 : 28.908912432636 : JumpEnd); (16.7760441666667 : 28.908912432636 : JumpStart); (16.9427108333333 : 28.908912432636 : JumpEnd); (18.375 : 28.908912432636)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/ClimberProfile/ClimberProfile_PlaceOutdoorCrag3" />
+      <nodes>
+        <classShapeMoniker Id="f21883ae-3a88-4dbb-a062-a707e91c5f52" />
+        <classShapeMoniker Id="2ce8eccc-e9ce-42a9-a724-17829ea7094f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11 : 30.34375); (12.2838504166667 : 30.34375 : JumpStart); (12.4505170833333 : 30.34375 : JumpEnd); (13.0104166666667 : 30.34375 : JumpStart); (13.1770833333333 : 30.34375 : JumpEnd); (13.4947941666667 : 30.34375 : JumpStart); (13.6614608333333 : 30.34375 : JumpEnd); (16.4166666666667 : 30.34375 : JumpStart); (16.7395833333333 : 30.34375 : JumpEnd); (16.7760441666667 : 30.34375 : JumpStart); (16.9427108333333 : 30.34375 : JumpEnd); (18.375 : 30.34375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/MessageBoard/MessageBoard_PlaceOutdoorCrag" />
+      <nodes>
+        <classShapeMoniker Id="4b84c130-7e14-45f5-8517-40dc7e1e3b34" />
+        <classShapeMoniker Id="2ce8eccc-e9ce-42a9-a724-17829ea7094f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14 : 39.3374239095052); (14.4166666666667 : 39.3374239095052 : JumpStart); (14.5833333333333 : 39.3374239095052 : JumpEnd); (14.75 : 39.3374239095052)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/PlaceOutdoorDetail/PlaceOutdoorDetail_PlaceOutdoorAuthority" />
+      <nodes>
+        <classShapeMoniker Id="8b227106-1e1c-4343-944c-e4bf313b9198" />
+        <classShapeMoniker Id="e93c8a83-bd0b-455e-82de-450802f0ee15" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(14 : 40.5278344726562); (14.4166666666667 : 40.5278344726562 : JumpStart); (14.5833333333333 : 40.5278344726562 : JumpEnd); (17.5104166666667 : 40.5278344726562 : JumpStart); (17.6770833333333 : 40.5278344726562 : JumpEnd); (19.375 : 40.5278344726562); (19.375 : 32.2696150716146)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/PlaceOutdoorDetail/PlaceOutdoorDetail_PlaceOutdoorCrag" />
+      <nodes>
+        <classShapeMoniker Id="8b227106-1e1c-4343-944c-e4bf313b9198" />
+        <classShapeMoniker Id="2ce8eccc-e9ce-42a9-a724-17829ea7094f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 29.53125025); (9.91666666666667 : 29.53125025 : JumpStart); (10.0833333333333 : 29.53125025 : JumpEnd); (13.09375 : 29.53125025); (13.09375 : 37.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/ClimberProfile/ClimberProfile_PlaceOutdoorDetail" />
+      <nodes>
+        <classShapeMoniker Id="f21883ae-3a88-4dbb-a062-a707e91c5f52" />
+        <classShapeMoniker Id="8b227106-1e1c-4343-944c-e4bf313b9198" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 29.53125025); (5.79166666666667 : 29.53125025 : JumpStart); (6.08333333333333 : 29.53125025 : JumpEnd); (9.91666666666667 : 29.53125025 : JumpStart); (10.0833333333333 : 29.53125025 : JumpEnd); (12.6093725 : 29.53125025); (12.6093725 : 37.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/ClimberProfile/ClimberProfile_PlaceOutdoorDetail1" />
+      <nodes>
+        <classShapeMoniker Id="f21883ae-3a88-4dbb-a062-a707e91c5f52" />
+        <classShapeMoniker Id="8b227106-1e1c-4343-944c-e4bf313b9198" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 29.53125025); (13.5781275 : 29.53125025); (13.5781275 : 37.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/ClimberProfile/ClimberProfile_PlaceOutdoorDetail2" />
+      <nodes>
+        <classShapeMoniker Id="f21883ae-3a88-4dbb-a062-a707e91c5f52" />
+        <classShapeMoniker Id="8b227106-1e1c-4343-944c-e4bf313b9198" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 29.53125025); (9.91666666666667 : 29.53125025 : JumpStart); (10.0833333333333 : 29.53125025 : JumpEnd); (12.36718375 : 29.53125025); (12.36718375 : 37.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/ClimberProfile/ClimberProfile_PlaceOutdoorDetail3" />
+      <nodes>
+        <classShapeMoniker Id="f21883ae-3a88-4dbb-a062-a707e91c5f52" />
+        <classShapeMoniker Id="8b227106-1e1c-4343-944c-e4bf313b9198" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.437500625 : 36.7465844726563); (8.437500625 : 46.7668240787761); (9 : 46.7668240787761)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/AreaTag/AreaTag_PlacesInArea" />
+      <nodes>
+        <classShapeMoniker Id="3566f6e0-83c1-46a3-91d9-ae2cffa369bd" />
+        <classShapeMoniker Id="76c9eb13-f22e-459c-8b9b-ee4d1ed865d5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 38.625); (8.375 : 38.5); (10 : 38.5); (10 : 35.9711531575521)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/Club/Club_UserInClub" />
+      <nodes>
+        <classShapeMoniker Id="4b23780b-78f0-41e7-bada-024db35f99f0" />
+        <classShapeMoniker Id="f31a61cd-ad96-4604-a071-1b26c015e56d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.96066982692308 : 32.7720157877604); (3.96066982692308 : 34.25); (5.54166666666667 : 34.25 : JumpStart); (5.70833333333333 : 34.25 : JumpEnd); (5.79166666666667 : 34.25 : JumpStart); (6.11458333333333 : 34.25 : JumpEnd); (8.625 : 34.25); (8.625 : 35.423076578776); (9 : 35.423076578776)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/ClimberProfile/ClimberProfile_UserInClub" />
+      <nodes>
+        <classShapeMoniker Id="f21883ae-3a88-4dbb-a062-a707e91c5f52" />
+        <classShapeMoniker Id="f31a61cd-ad96-4604-a071-1b26c015e56d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 31.8235078938802); (3.5 : 31.8235078938802)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/aspnet_Membership/aspnet_Membership_ClimberProfile" />
+      <nodes>
+        <classShapeMoniker Id="a73c6498-607e-40b4-87f9-4b1b85f0f7ec" />
+        <classShapeMoniker Id="f21883ae-3a88-4dbb-a062-a707e91c5f52" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.125 : 36); (2.125 : 35.0937524414063)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/aspnet_Application/aspnet_Application_aspnet_Membership" />
+      <nodes>
+        <classShapeMoniker Id="2f20beaa-60ae-421f-ba94-50293c5d7628" />
+        <classShapeMoniker Id="a73c6498-607e-40b4-87f9-4b1b85f0f7ec" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.0468725 : 24.0428898111979); (3.0468725 : 30.09375); (3.5 : 30.09375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/aspnet_User/aspnet_User_ClimberProfile" />
+      <nodes>
+        <classShapeMoniker Id="76110575-d743-4af6-82f6-6910b4511375" />
+        <classShapeMoniker Id="f21883ae-3a88-4dbb-a062-a707e91c5f52" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 22.125); (2.5 : 18.2911185709635); (4.25 : 18.2911185709635)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/aspnet_User/aspnet_User_Feedback" />
+      <nodes>
+        <classShapeMoniker Id="76110575-d743-4af6-82f6-6910b4511375" />
+        <classShapeMoniker Id="11483b3c-3460-46e1-b4c4-52df217ce83b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.34375 : 24.0428898111979); (3.34375 : 33.4898826676432); (2.95051958333333 : 33.4898826676432 : JumpStart); (2.78385291666667 : 33.4898826676432 : JumpEnd); (2.75 : 33.4898826676432)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/aspnet_User/aspnet_User_aspnet_Membership" />
+      <nodes>
+        <classShapeMoniker Id="76110575-d743-4af6-82f6-6910b4511375" />
+        <classShapeMoniker Id="a73c6498-607e-40b4-87f9-4b1b85f0f7ec" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.5 : 23.2535429804688); (5.25 : 23.2535429804688); (5.25 : 22.4641951497396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/aspnet_User/aspnet_User_aspnet_Profile" />
+      <nodes>
+        <classShapeMoniker Id="76110575-d743-4af6-82f6-6910b4511375" />
+        <classShapeMoniker Id="80b7b6d7-9613-441e-92a6-a508172b56ee" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.86718625 : 36); (2.86718625 : 24.0428898111979)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/aspnet_Application/aspnet_Application_aspnet_User" />
+      <nodes>
+        <classShapeMoniker Id="2f20beaa-60ae-421f-ba94-50293c5d7628" />
+        <classShapeMoniker Id="76110575-d743-4af6-82f6-6910b4511375" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="61ed4aaf-9ee1-4932-ae25-a05421cbc90f" absoluteBounds="6.5, 47.625, 2, 3.23266845703125">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/Place" />
+      <nestedChildShapes>
+        <elementListCompartment Id="22a7ffeb-6db8-412f-86e7-84c1b0194edf" absoluteBounds="6.515, 48.085, 1.9700000000000002, 2.67266845703125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.5 : 47.96875); (15.75 : 47.96875); (15.75 : 42.3461531575521)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/Place/Place_PartnerCallPlace" />
+      <nodes>
+        <classShapeMoniker Id="61ed4aaf-9ee1-4932-ae25-a05421cbc90f" />
+        <classShapeMoniker Id="5351c42c-97a8-4c02-890c-7e85998e2ee8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 48.1718775); (17.59375 : 48.1718775); (17.59375 : 36.5891951497396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/Place/Place_PartnerCallSubscription" />
+      <nodes>
+        <classShapeMoniker Id="61ed4aaf-9ee1-4932-ae25-a05421cbc90f" />
+        <classShapeMoniker Id="23981d69-1df4-41d1-8493-03e7e7acb4b7" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 49.5804659016927); (9 : 49.5804659016927)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/Place/Place_PlaceIndoorDetail" />
+      <nodes>
+        <classShapeMoniker Id="61ed4aaf-9ee1-4932-ae25-a05421cbc90f" />
+        <classShapeMoniker Id="5d5448d2-6b26-4948-8e57-09c332518077" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 47.7656225); (13 : 47.7656225); (13 : 43.0961531575521)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/Place/Place_PlaceMediaShare" />
+      <nodes>
+        <classShapeMoniker Id="61ed4aaf-9ee1-4932-ae25-a05421cbc90f" />
+        <classShapeMoniker Id="e541221c-ab85-4944-9bb4-731c74cc02b9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.46875125 : 47.625); (8.46875125 : 38.34375); (9.91666666666667 : 38.34375 : JumpStart); (10.0833333333333 : 38.34375 : JumpEnd); (12 : 38.34375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/Place/Place_PlaceOutdoorDetail" />
+      <nodes>
+        <classShapeMoniker Id="61ed4aaf-9ee1-4932-ae25-a05421cbc90f" />
+        <classShapeMoniker Id="8b227106-1e1c-4343-944c-e4bf313b9198" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 47.625); (9 : 47.3461531575521)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/Place/Place_PlacesInArea" />
+      <nodes>
+        <classShapeMoniker Id="61ed4aaf-9ee1-4932-ae25-a05421cbc90f" />
+        <classShapeMoniker Id="76c9eb13-f22e-459c-8b9b-ee4d1ed865d5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.48153846153846 : 32.7720157877604); (6.03125 : 33.321727326222); (6.03125 : 49.2413342285156); (6.5 : 49.2413342285156)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/ClimberProfile/ClimberProfile_Place" />
+      <nodes>
+        <classShapeMoniker Id="f21883ae-3a88-4dbb-a062-a707e91c5f52" />
+        <classShapeMoniker Id="61ed4aaf-9ee1-4932-ae25-a05421cbc90f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d161d213-5507-4ee9-b817-e9297301dd80" absoluteBounds="9.75, 21.375, 2, 1.75354248046875">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/PartnerCallSurvey" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ead46c56-4ae4-4911-b392-e924eb823e61" absoluteBounds="9.765, 21.835, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3bd3daaf-4486-4916-a37a-ebfbcf3b7e63" absoluteBounds="10, 15.375, 2, 2.9039737955729166">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/PartnerCall" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4c0afbf0-92be-4794-b1a4-fc3fc56ef93c" absoluteBounds="10.015, 15.835, 1.9700000000000002, 2.3439737955729165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(12 : 16.8269868977865); (16.5 : 16.8269868977865); (16.5 : 32.75); (14.5 : 32.75); (14.5 : 40.875); (15.75 : 40.875); (15.75 : 41.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/PartnerCall/PartnerCall_PartnerCallPlace" />
+      <nodes>
+        <classShapeMoniker Id="3bd3daaf-4486-4916-a37a-ebfbcf3b7e63" />
+        <classShapeMoniker Id="5351c42c-97a8-4c02-890c-7e85998e2ee8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(12 : 17.5842328466797); (16.8593775 : 17.5842328466797); (16.8593775 : 33)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/PartnerCall/PartnerCall_PartnerCallReply" />
+      <nodes>
+        <classShapeMoniker Id="3bd3daaf-4486-4916-a37a-ebfbcf3b7e63" />
+        <classShapeMoniker Id="c76d333c-1123-446c-8881-d3fd164c5204" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.875 : 18.2789737955729); (10.875 : 21.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/PartnerCall/PartnerCall_PartnerCallSurvey" />
+      <nodes>
+        <classShapeMoniker Id="3bd3daaf-4486-4916-a37a-ebfbcf3b7e63" />
+        <classShapeMoniker Id="d161d213-5507-4ee9-b817-e9297301dd80" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.031252 : 29.375); (5.031252 : 28.4109318033854); (5.625 : 28.4109318033854); (5.625 : 22.7141951497396); (6.5 : 22.7141951497396); (6.5 : 16.8269868977865); (10 : 16.8269868977865)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ClimbfindLinqModelDataContext/ClimberProfile/ClimberProfile_PartnerCall" />
+      <nodes>
+        <classShapeMoniker Id="f21883ae-3a88-4dbb-a062-a707e91c5f52" />
+        <classShapeMoniker Id="3bd3daaf-4486-4916-a37a-ebfbcf3b7e63" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="8c2e7f79-fb60-484c-99f9-501e37cb1438" absoluteBounds="12, 2.125, 2, 1.5891951497395831">
+      <DataClassMoniker Name="/ClimbfindLinqModelDataContext/PartnerWidgetCSS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d7518aa7-7cff-4f01-9c23-70c4710e6d90" absoluteBounds="12.015, 2.585, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

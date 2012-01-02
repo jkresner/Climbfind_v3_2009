@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.Master.cs" Inherits="IdentityStuff.Views.Admin.Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    
+    <div style="background:lightgrey">
+    <table>
+        <tr>
+            <td><%= Html.ActionLink<AdminController>(c=>c.LogList(), "Log") %></td>
+            <td> - <%= Html.ActionLink<AdminController>(c=>c.ExceptionsList(), "Exceptions") %></td>
+            <td> - <%= Html.ActionLink<AdminController>(c=>c.UsersList(), "Users") %></td>            
+            <td> - <%= Html.ActionLink<AdminController>(c=>c.PlaceList(), "Places") %></td>
+            <td> - <%= Html.ActionLink<AdminController>(c => c.ClubsList(), "Clubs")%></td>                    
+            <td> - <%= Html.ActionLink<AdminController>(c => c.Feedback(), "Feedback")%></td>
+            <td> - <%= Html.ActionLink<AdminController>(c => c.MessageBoardPosts(), "Message Posts")%></td>                    
+            <td> - <%= Html.ActionLink<AdminController>(c => c.GenerateSiteMap(), "SiteMap")%></td>                    
+            <td> - <%= Html.ActionLink<AdminController>(c => c.GenerateUrlGonePage(), "UrlGone Page", new { target = "_blank" })%></td>                    
+			<td> - <%= Html.ActionLink<AdminController>(c => c.DeleteCachedDiskImages(), "Purge Cached Images", new { target = "_blank" })%></td>                    
+        </tr>
+    </table>
+    </div>
+
+    <br />
+
+    <div>
+        <asp:ContentPlaceHolder ID="m" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<browsers>
+  <browser refID="Default">
+    <controlAdapters>
+      <adapter controlType="System.Web.UI.WebControls.DropDownList"
+      adapterType="CraigBlog.Net.Code.Adapters.DropDownListAdapter" />
+    </controlAdapters>
+  </browser>
+
+<!--
+NOTE: If you are using VS2005 with the standard build model, simply place the DropDownListAdapter in the App_Code directory and use the following browser section:
+
+  <browser refID="IE6to9">ClimbFind.Web.UI.Controls.DropDownLists.PlaceDDL
+    <controlAdapters>
+      <adapter controlType="System.Web.UI.WebControls.DropDownList"
+      adapterType="DropDownListAdapter" />
+    </controlAdapters>
+  </browser>
+-->
+
+</browsers>

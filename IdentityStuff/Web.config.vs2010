@@ -1,0 +1,193 @@
+﻿<?xml version="1.0"?>
+<configuration>
+  <configSections>
+    <sectionGroup name="system.web.extensions" type="System.Web.Configuration.SystemWebExtensionsSectionGroup, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35">
+      <sectionGroup name="scripting" type="System.Web.Configuration.ScriptingSectionGroup, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35">
+        <section name="scriptResourceHandler" type="System.Web.Configuration.ScriptingScriptResourceHandlerSection, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" allowDefinition="MachineToApplication"/>
+        <sectionGroup name="webServices" type="System.Web.Configuration.ScriptingWebServicesSectionGroup, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35">
+          <section name="jsonSerialization" type="System.Web.Configuration.ScriptingJsonSerializationSection, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" allowDefinition="Everywhere"/>
+          <section name="profileService" type="System.Web.Configuration.ScriptingProfileServiceSection, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" allowDefinition="MachineToApplication"/>
+          <section name="authenticationService" type="System.Web.Configuration.ScriptingAuthenticationServiceSection, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" allowDefinition="MachineToApplication"/>
+          <section name="roleService" type="System.Web.Configuration.ScriptingRoleServiceSection, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" requirePermission="false" allowDefinition="MachineToApplication"/>
+        </sectionGroup>
+      </sectionGroup>
+    </sectionGroup>
+  </configSections>
+  <appSettings>
+    <add key="MailManName" value="Climbfind"/>
+    <add key="MailManAddress" value="mailman@climbfind.com"/>
+    <add key="OSTemporaryImageDirectory" value="images\temp\"/>
+    <!-- Local Development Settings -->
+    <add key="OSRootDirectory" value="E:\Development\Projects\ClimbFind\IdentityStuff\"/>
+    <add key="VAMSuite_LicenseKey" value="32-8311203719|LAP2"/>
+    <add key="WebAddress" value="http://localhost:1047/"/>
+    <!-- Live DiscountASP Settings
+    <add key="OSRootDirectory" value="e:\web\climbfindco\htdocs\" />
+    <add key="VAMSuite_LicenseKey" value="32-8311203719|eweb701" />
+    <add key="WebAddress" value="http://www.climbfind.com/" /> -->
+  </appSettings>
+  <connectionStrings>
+    <remove name="LocalSqlServer"/>
+    <add name="ClimbFindDB" connectionString="Data Source=Jonathon-PC\JKServer;Initial Catalog=CFLive05.03;Integrated Security=True"/>
+    <!--<add name="ClimbFindDB" connectionString="Data Source=tcp:esql2k501.discountasp.net;Initial Catalog=SQL2005_523956_climbfind;User ID=SQL2005_523956_climbfind_user;Password=Space88;" />-->
+  </connectionStrings>
+  <system.net>
+    <mailSettings>
+      <smtp deliveryMethod="Network" from="mailman@climbfind.com">
+        <network host="localhost" port="25" userName="youraccount" password="yourpassword"/>
+      </smtp>
+    </mailSettings>
+  </system.net>
+  <system.web>
+    <machineKey validationKey="C3A959A9A1F223497106E8213FF7CED9ADC1CBAEF10161CD3C13D3AC1DBA247B65EA2793264441CA27B2F2CDAB71C50C9D2BE072696A92C01DBBF227" decryptionKey="11C4D3F448AD1D39F5424AA927CCB15C5A2B221C8FBEECFD" validation="SHA1"/>
+    <membership defaultProvider="ClimbFindSqlMembershipProvider" userIsOnlineTimeWindow="70000000">
+      <providers>
+        <remove name="AspNetSqlMembershipProvider"/>
+        <add name="ClimbFindSqlMembershipProvider" type="System.Web.Security.SqlMembershipProvider" connectionStringName="ClimbFindDB" enablePasswordRetrieval="false" enablePasswordReset="true" requiresQuestionAndAnswer="false" minRequiredNonalphanumericCharacters="0" minRequiredPasswordLength="5" maxInvalidPasswordAttempts="100" passwordFormat="Hashed" applicationName="/"/>
+      </providers>
+    </membership>
+    <!-- 
+            Set compilation debug="true" to insert debugging 
+            symbols into the compiled page. Because this 
+            affects performance, set this value to true only 
+            during development.
+    -->
+    <compilation debug="true">
+      <assemblies>
+        <add assembly="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+        <add assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+        <add assembly="AspMvcP4, Version=1.0.0.0, Culture=neutral, PublicKeyToken=63e5f720df8ebe1e" />
+        <add assembly="System.Data.DataSetExtensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+        <add assembly="System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+        <add assembly="System.Data.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+      </assemblies>
+    </compilation>
+    <authentication mode="Forms">
+      <forms loginUrl="/Login" protection="All" timeout="70000000"/>
+    </authentication>
+    <!--
+            The <customErrors> section enables configuration 
+            of what to do if/when an unhandled error occurs 
+            during the execution of a request. Specifically, 
+            it enables developers to configure html error pages 
+            to be displayed in place of a error stack trace.
+
+        <customErrors mode="RemoteOnly" defaultRedirect="GenericErrorPage.htm">
+            <error statusCode="403" redirect="NoAccess.htm" />
+            <error statusCode="404" redirect="FileNotFound.htm" />
+        </customErrors>
+    -->
+    <httpRuntime maxRequestLength="8250"/>
+    <pages>
+      <controls>
+        <add tagPrefix="asp" namespace="System.Web.UI" assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+        <add tagPrefix="asp" namespace="System.Web.UI.WebControls" assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+        <add tagPrefix="VAM" namespace="PeterBlum.VAM" assembly="PeterBlum.VAM" />
+        <add tagPrefix="DDL" namespace="ClimbFind.Web.UI.Controls.DropDownLists" assembly="IdentityStuff" />
+
+        <add tagPrefix="Ad" tagName="Google160x600" src="~/Controls/AdUnits/Google160x600.ascx" />
+        <add tagPrefix="Ad" tagName="InputFormRight160x600" src="~/Controls/AdUnits/InputFormRight160x600.ascx" />
+
+        <add tagPrefix="cf" tagName="MapCoordinatePicker" src="~/Controls/MapCoordinatePicker.ascx" />
+        <add tagPrefix="cf" tagName="CharacterCount" src="~/Controls/TextBoxCharacterCounter.ascx" />
+        <add tagPrefix="cf" tagName="MessageBoard" src="~/Controls/MessageBoard.ascx" />
+        <add tagPrefix="cf" tagName="NavMenu" src="~/Controls/NavMenu.ascx" />
+        <add tagPrefix="cf" tagName="NewPartnerCall" src="~/Controls/NewPartnerCall.ascx" />
+        <add tagPrefix="cf" tagName="LoginOrRegister" src="~/Controls/LoginOrRegister.ascx" />
+        <add tagPrefix="cf" tagName="ClimbFindProfileFull" src="~/Controls/ClimbFindProfileFull.ascx" />
+        <add tagPrefix="cf" tagName="Ratings" src="~/Controls/Ratings.ascx"/>
+
+        <add tagPrefix="cf" tagName="AboutGroups" src="~/Controls/Content/AboutGroups.ascx"/>
+        <add tagPrefix="cf" tagName="AboutRollCalls" src="~/Controls/Content/AboutRollCalls.ascx"/>
+
+        <add tagPrefix="cf" tagName="HomepageNewsFeed" src="~/Views/News/HomepageNewsFeed.ascx"/>
+        <add tagPrefix="cf" tagName="SubscribeToPartnerCallsWhereIClimb" src="~/Controls/SubscribeToPartnerCallsWhereIClimb.ascx" />
+
+        <add tagPrefix="VAL" tagName="Length" src="~/Controls/Validators/Length.ascx" />
+        <add tagPrefix="VAL" tagName="Email" src="~/Controls/Validators/Email.ascx" />
+        <add tagPrefix="VAL" tagName="FullName" src="~/Controls/Validators/FullName.ascx" />
+        <add tagPrefix="VAL" tagName="PlaceName" src="~/Controls/Validators/PlaceName.ascx" />
+        <add tagPrefix="VAL" tagName="Password" src="~/Controls/Validators/Password.ascx" />
+        <add tagPrefix="VAL" tagName="GroupName" src="~/Controls/Validators/GroupName.ascx" />
+        <add tagPrefix="VAL" tagName="Message" src="~/Controls/Validators/Message.ascx" />
+        <add tagPrefix="VAL" tagName="PhoneNumber" src="~/Controls/Validators/PhoneNumber.ascx" />
+        <add tagPrefix="VAL" tagName="Quantity" src="~/Controls/Validators/Quantity.ascx" />
+      </controls>
+      <namespaces>
+        <add namespace="Microsoft.Web.Mvc"/>
+        <add namespace="System.Web.Mvc"/>
+        <add namespace="System.Web.Routing"/>
+        <add namespace="System.Linq"/>
+        <add namespace="System.Collections.Generic"/>
+        <add namespace="ClimbFind.Web.Mvc.Controllers"/>
+        <add namespace="ClimbFind.Model.Objects"/>
+        <add namespace="ClimbFind.Controls"/>
+        <add namespace="ClimbFind.Helpers"/>
+        <add namespace="ClimbFind.Model.Enum"/>
+        <add namespace="ClimbFind.Content"/>
+      </namespaces>
+    </pages>
+    <httpHandlers>
+      <remove verb="*" path="*.asmx"/>
+      <add verb="*" path="*.asmx" validate="false" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+      <add verb="*" path="*_AppService.axd" validate="false" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+      <add verb="GET,HEAD" path="ScriptResource.axd" validate="false" type="System.Web.Handlers.ScriptResourceHandler, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+    </httpHandlers>
+    <httpModules>
+      <add name="ScriptModule" type="System.Web.Handlers.ScriptModule, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+      <add name="UrlRoutingModule" type="System.Web.Routing.UrlRoutingModule, AspMvcP4, Version=1.0.0.0, Culture=neutral, PublicKeyToken=63e5f720df8ebe1e"/>
+    </httpModules>
+  </system.web>
+  <system.web.extensions/>
+  <system.webServer>
+    <validation validateIntegratedModeConfiguration="true"/>
+    <modules runAllManagedModulesForAllRequests="true">
+      <remove name="ScriptModule"/>
+      <!-- Remove unnecessary Http Modules for faster pipeline -->
+      <remove name="WindowsAuthentication"/>
+      <remove name="PassportAuthentication"/>
+      <remove name="FileAuthorization"/>
+      <remove name="UrlRoutingModule"/>
+      <add name="ScriptModule" preCondition="managedHandler" type="System.Web.Handlers.ScriptModule, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+      <add name="UrlRoutingModule" type="System.Web.Routing.UrlRoutingModule, AspMvcP4, Version=1.0.0.0, Culture=neutral, PublicKeyToken=63e5f720df8ebe1e" />
+    </modules>
+    <handlers>
+      <remove name="WebServiceHandlerFactory-Integrated"/>
+      <remove name="ScriptHandlerFactory"/>
+      <remove name="ScriptHandlerFactoryAppServices"/>
+      <remove name="ScriptResource"/>
+      <add name="ScriptHandlerFactory" verb="*" path="*.asmx" preCondition="integratedMode" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+      <add name="ScriptHandlerFactoryAppServices" verb="*" path="*_AppService.axd" preCondition="integratedMode" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+      <add name="ScriptResource" preCondition="integratedMode" verb="GET,HEAD" path="ScriptResource.axd" type="System.Web.Handlers.ScriptResourceHandler, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+      <add name="MvcScriptMap" preCondition="classicMode,bitness32" verb="*" path="*.mvc" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll"/>
+      <add name="MvcScriptMap64" preCondition="classicMode,bitness64" verb="*" path="*.mvc" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework64\v2.0.50727\aspnet_isapi.dll"/>
+      <add name="UrlRoutingHandler" preCondition="integratedMode" verb="*" path="UrlRouting.axd" type="System.Web.HttpForbiddenHandler, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
+    </handlers>
+  </system.webServer>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Mvc" publicKeyToken="31bf3856ad364e35"/>
+        <bindingRedirect oldVersion="1.0.0.0" newVersion="2.0.0.0"/>
+      </dependentAssembly>
+    </assemblyBinding>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1" appliesTo="v2.0.50727">
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Extensions" publicKeyToken="31bf3856ad364e35"/>
+        <bindingRedirect oldVersion="1.0.0.0-1.1.0.0" newVersion="3.5.0.0"/>
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Extensions.Design" publicKeyToken="31bf3856ad364e35"/>
+        <bindingRedirect oldVersion="1.0.0.0-1.1.0.0" newVersion="3.5.0.0"/>
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+  <system.codedom>
+    <compilers>
+      <compiler language="c#;cs;csharp" extension=".cs" type="Microsoft.CSharp.CSharpCodeProvider, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" warningLevel="4">
+        <providerOption name="CompilerVersion" value="v3.5"/>
+        <providerOption name="WarnAsError" value="false"/>
+      </compiler>
+    </compilers>
+  </system.codedom>
+</configuration>

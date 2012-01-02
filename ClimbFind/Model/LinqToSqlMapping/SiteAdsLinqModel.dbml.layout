@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="SiteAdsLinqModel">
+  <DataContextMoniker Name="/SiteAdsLinqModelDataContext" />
+  <nestedChildShapes>
+    <classShape Id="bf4f5e96-42c7-4f4e-94e9-30ab2e0bcdd6" absoluteBounds="4.375, 0.875, 2, 1.9178898111979166">
+      <DataClassMoniker Name="/SiteAdsLinqModelDataContext/AdUnit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="503eb433-6ba9-43d5-a409-8a5913fd2c89" absoluteBounds="4.3900000000000006, 1.335, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e95b0f7e-aa5c-4396-86b9-b4fddf3bc73f" absoluteBounds="1.375, 6.25, 2, 1.589195149739584">
+      <DataClassMoniker Name="/SiteAdsLinqModelDataContext/AdClient" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ca396670-d5c2-4e90-8719-f279830b5b53" absoluteBounds="1.3900000000000001, 6.71, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="41c7a876-c7df-4a34-bc9b-bb7f1af8f66d" absoluteBounds="4.125, 6.5, 2, 1.2605004882812505">
+      <DataClassMoniker Name="/SiteAdsLinqModelDataContext/AdProduct" />
+      <nestedChildShapes>
+        <elementListCompartment Id="87086436-c352-43a5-80a5-aab63efb1492" absoluteBounds="4.1400000000000006, 6.96, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.375 : 7.13025024414063); (4.125 : 7.13025024414063)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SiteAdsLinqModelDataContext/AdClient/AdClient_AdProduct" />
+      <nodes>
+        <classShapeMoniker Id="e95b0f7e-aa5c-4396-86b9-b4fddf3bc73f" />
+        <classShapeMoniker Id="41c7a876-c7df-4a34-bc9b-bb7f1af8f66d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="62dc75d9-719d-4bcf-8d6f-b39f931b8556" absoluteBounds="7.5, 4.375, 2, 1.5891951497395831">
+      <DataClassMoniker Name="/SiteAdsLinqModelDataContext/AdClick" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b46ba823-79dc-4ea1-bfd8-eb42fc280264" absoluteBounds="7.515, 4.835, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c90def7d-c3da-4833-8003-ac1227333b5f" absoluteBounds="3.875, 3.25, 2, 2.5752791341145831">
+      <DataClassMoniker Name="/SiteAdsLinqModelDataContext/Ad" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cde7923b-c757-423c-a7b4-bb0d888ae9f3" absoluteBounds="3.8899999999999997, 3.71, 1.9700000000000002, 2.015279134114583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.875 : 5.10013956705729); (7.5 : 5.10013956705729)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SiteAdsLinqModelDataContext/Ad/Ad_AdClick" />
+      <nodes>
+        <classShapeMoniker Id="c90def7d-c3da-4833-8003-ac1227333b5f" />
+        <classShapeMoniker Id="62dc75d9-719d-4bcf-8d6f-b39f931b8556" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.375 : 6.25); (3.875 : 5.82527913411458)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SiteAdsLinqModelDataContext/AdClient/AdClient_Ad" />
+      <nodes>
+        <classShapeMoniker Id="e95b0f7e-aa5c-4396-86b9-b4fddf3bc73f" />
+        <classShapeMoniker Id="c90def7d-c3da-4833-8003-ac1227333b5f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5 : 6.5); (5 : 5.82527913411458)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SiteAdsLinqModelDataContext/AdProduct/AdProduct_Ad" />
+      <nodes>
+        <classShapeMoniker Id="41c7a876-c7df-4a34-bc9b-bb7f1af8f66d" />
+        <classShapeMoniker Id="c90def7d-c3da-4833-8003-ac1227333b5f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.125 : 2.79288981119792); (5.125 : 3.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SiteAdsLinqModelDataContext/AdUnit/AdUnit_Ad" />
+      <nodes>
+        <classShapeMoniker Id="bf4f5e96-42c7-4f4e-94e9-30ab2e0bcdd6" />
+        <classShapeMoniker Id="c90def7d-c3da-4833-8003-ac1227333b5f" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="CFLive06.16" Class="SiteAdsLinqModelDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=JKLAp;Initial Catalog=CFLive06.16;Integrated Security=True" SettingsObjectName="ClimbFind.Properties.Settings" SettingsPropertyName="CFLive06_16ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="SiteAds.AdUnit" Member="AdUnits">
+    <Type Name="AdUnit">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(16) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClimbfindPageName" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="ClimbfindPageLocation" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(555)" CanBeNull="true" />
+      <Column Name="MaxX" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaxY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="AdUnit_Ad" Member="Ads" ThisKey="ID" OtherKey="SrcAdUnitID" Type="Ad" />
+    </Type>
+  </Table>
+  <Table Name="SiteAds.AdClient" Member="AdClients">
+    <Type Name="AdClient">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Website" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ContactPerson" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="ContactEmail" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Association Name="AdClient_AdProduct" Member="AdProducts" ThisKey="ID" OtherKey="ClientID" Type="AdProduct" />
+      <Association Name="AdClient_Ad" Member="Ads" ThisKey="ID" OtherKey="ClientID" Type="Ad" />
+    </Type>
+  </Table>
+  <Table Name="SiteAds.AdProduct" Member="AdProducts">
+    <Type Name="AdProduct">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClientID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Association Name="AdProduct_Ad" Member="Ads" ThisKey="ID" OtherKey="ProductID" Type="Ad" />
+      <Association Name="AdClient_AdProduct" Member="AdClient" ThisKey="ClientID" OtherKey="ID" Type="AdClient" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="SiteAds.AdClick" Member="AdClicks">
+    <Type Name="AdClick">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AdID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SrcUrl" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="ClickDateTime" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="Ad_AdClick" Member="Ad" ThisKey="AdID" OtherKey="ID" Type="Ad" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="SiteAds.Ad" Member="Ads">
+    <Type Name="Ad">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SrcAdUnitID" Type="System.String" DbType="NVarChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProductName" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="DestinationPageUrl" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="DateStart" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DateEnd" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Impressions" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ImageFileName" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ImageTagStyles" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Association Name="Ad_AdClick" Member="AdClicks" ThisKey="ID" OtherKey="AdID" Type="AdClick" />
+      <Association Name="AdClient_Ad" Member="AdClient" ThisKey="ClientID" OtherKey="ID" Type="AdClient" IsForeignKey="true" />
+      <Association Name="AdProduct_Ad" Member="AdProduct" ThisKey="ProductID" OtherKey="ID" Type="AdProduct" IsForeignKey="true" />
+      <Association Name="AdUnit_Ad" Member="AdUnit" ThisKey="SrcAdUnitID" OtherKey="ID" Type="AdUnit" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

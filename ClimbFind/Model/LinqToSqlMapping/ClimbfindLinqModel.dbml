@@ -1,0 +1,587 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="CFLive10.01" Class="ClimbfindLinqModelDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=JKLAP;Initial Catalog=CFLive10.01;Integrated Security=True" SettingsObjectName="ClimbFind.Properties.Settings" SettingsPropertyName="CFLive10_01ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="ClimbFind.Advertisement" Member="Advertisements">
+    <Type Name="Advertisement">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CategoryID" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="SubmittedByUserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Text" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="ImageUrl" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Association Name="AdvertisementCategory_Advertisement" Member="AdvertisementCategory" ThisKey="CategoryID" OtherKey="ID" Type="AdvertisementCategory" IsForeignKey="true" />
+      <Association Name="ClimberProfile_Advertisement" Member="ClimberProfile" ThisKey="SubmittedByUserID" OtherKey="ID" Type="ClimberProfile" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.AdvertisementCategory" Member="AdvertisementCategories">
+    <Type Name="AdvertisementCategory">
+      <Column Name="ID" Type="System.Byte" DbType="TinyInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AdTitle" Type="System.String" DbType="NVarChar(80) NOT NULL" CanBeNull="false" />
+      <Association Name="AdvertisementCategory_Advertisement" Member="Advertisements" ThisKey="ID" OtherKey="CategoryID" Type="Advertisement" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.AreaTag" Member="AreaTags">
+    <Type Name="AreaTag">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CountryID" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsCountry" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="ParagraphName" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="FriendlyUrlName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Latitude" Type="System.Decimal" DbType="Decimal(18,12) NOT NULL" CanBeNull="false" />
+      <Column Name="Longitude" Type="System.Decimal" DbType="Decimal(18,12) NOT NULL" CanBeNull="false" />
+      <Column Name="DefaultVirtualEarthZoom" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Association Name="AreaTag_ClubInArea" Member="ClubInAreas" ThisKey="ID" OtherKey="AreaTagID" Type="ClubInArea" />
+      <Association Name="AreaTag_PlacesInArea" Member="PlacesInAreas" ThisKey="ID" OtherKey="AreaTagID" Type="PlacesInArea" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.ClimberProfile" Member="ClimberProfiles">
+    <Type Name="ClimberProfile">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NickName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Nationality" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="IsMale" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ProfilePictureFile" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ClimbingLevel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ClimbingGradeLower" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ClimbingGradeUpper" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ContractPhoneNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MessageBoardID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="EmailVerificationSent" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="EmailVerified" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PartnerStatusID" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="IsModerator" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="ClimberProfile_Advertisement" Member="Advertisements" ThisKey="ID" OtherKey="SubmittedByUserID" Type="Advertisement" />
+      <Association Name="ClimberProfile_ClimberProfileExtended" Member="ClimberProfileExtended" ThisKey="ID" OtherKey="ID" Type="ClimberProfileExtended" Cardinality="One" />
+      <Association Name="ClimberProfile_Club" Member="Clubs" ThisKey="ID" OtherKey="CreatedByUserID" Type="Club" />
+      <Association Name="ClimberProfile_MediaShare" Member="MediaShares" ThisKey="ID" OtherKey="SubmittedByUserID" Type="MediaShare" />
+      <Association Name="ClimberProfile_MessageBoardMessage" Member="MessageBoardMessages" ThisKey="ID" OtherKey="UserID" Type="MessageBoardMessage" />
+      <Association Name="ClimberProfile_PartnerCallReply" Member="PartnerCallReplies" ThisKey="ID" OtherKey="ReplyingUserID" Type="PartnerCallReply" />
+      <Association Name="ClimberProfile_PartnerCallSubscription" Member="PartnerCallSubscriptions" ThisKey="ID" OtherKey="UserID" Type="PartnerCallSubscription" />
+      <Association Name="ClimberProfile_PlaceOutdoorCrag" Member="PlaceOutdoorCrags" ThisKey="ID" OtherKey="CreatedByUserID" Type="PlaceOutdoorCrag" />
+      <Association Name="ClimberProfile_PlaceOutdoorCrag1" Member="PlaceOutdoorCrags1" ThisKey="ID" OtherKey="DescriptionImageFile1ByUserID" Type="PlaceOutdoorCrag" />
+      <Association Name="ClimberProfile_PlaceOutdoorCrag2" Member="PlaceOutdoorCrags2" ThisKey="ID" OtherKey="DescriptionImageFile2ByUserID" Type="PlaceOutdoorCrag" />
+      <Association Name="ClimberProfile_PlaceOutdoorCrag3" Member="PlaceOutdoorCrags3" ThisKey="ID" OtherKey="DescriptionImageFile3ByUserID" Type="PlaceOutdoorCrag" />
+      <Association Name="ClimberProfile_PlaceOutdoorDetail" Member="PlaceOutdoorDetails" ThisKey="ID" OtherKey="DescriptionByUserID" Type="PlaceOutdoorDetail" />
+      <Association Name="ClimberProfile_PlaceOutdoorDetail1" Member="PlaceOutdoorDetails1" ThisKey="ID" OtherKey="DescriptionImageFileByUserID" Type="PlaceOutdoorDetail" />
+      <Association Name="ClimberProfile_PlaceOutdoorDetail2" Member="PlaceOutdoorDetails2" ThisKey="ID" OtherKey="DescriptionImageFile2ByUserID" Type="PlaceOutdoorDetail" />
+      <Association Name="ClimberProfile_PlaceOutdoorDetail3" Member="PlaceOutdoorDetails3" ThisKey="ID" OtherKey="DescriptionImageFile3ByUserID" Type="PlaceOutdoorDetail" />
+      <Association Name="ClimberProfile_UserInClub" Member="UserInClubs" ThisKey="ID" OtherKey="UserID" Type="UserInClub" />
+      <Association Name="ClimberProfile_Place" Member="Places" ThisKey="ID" OtherKey="CreatedByUserID" Type="Place" />
+      <Association Name="ClimberProfile_PartnerCall" Member="PartnerCalls" ThisKey="ID" OtherKey="ClimberProfileID" Type="PartnerCall" />
+      <Association Name="MessageBoard_ClimberProfile" Member="MessageBoard" ThisKey="MessageBoardID" OtherKey="ID" Type="MessageBoard" IsForeignKey="true" />
+      <Association Name="aspnet_Membership_ClimberProfile" Member="aspnet_Membership" ThisKey="ID" OtherKey="UserId" Type="aspnet_Membership" IsForeignKey="true" />
+      <Association Name="aspnet_User_ClimberProfile" Member="aspnet_User" ThisKey="ID" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.ClimberProfileExtended" Member="ClimberProfileExtendeds">
+    <Type Name="ClimberProfileExtended">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BestMoment" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ClimbingHistory" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ClimbingAmbitions" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FavoritePlaces" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PlacesIWouldLikeToClimb" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CurrentProjects" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="LikeToClimb" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Grades" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CompetitionsICompeteIn" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="RoleModels" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FavoriteBrands" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="LikeAboutClimbfind" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DislikeAboutClimbfind" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="ClimberProfile_ClimberProfileExtended" Member="ClimberProfile" ThisKey="ID" OtherKey="ID" Type="ClimberProfile" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.ClimberProfilePartnerStatus" Member="ClimberProfilePartnerStatus">
+    <Type Name="ClimberProfilePartnerStatus">
+      <Column Name="ID" Type="System.Byte" DbType="TinyInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.Club" Member="Clubs">
+    <Type Name="Club">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="ShortName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Website" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="LogoImageFile" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="FriendlyUrlName" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="CountryID" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedByUserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ContactEmail" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AreaCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Latitude" Type="System.Decimal" DbType="Decimal(18,12) NOT NULL" CanBeNull="false" />
+      <Column Name="Longitude" Type="System.Decimal" DbType="Decimal(18,12) NOT NULL" CanBeNull="false" />
+      <Association Name="Club_ClubInArea" Member="ClubInAreas" ThisKey="ID" OtherKey="ClubID" Type="ClubInArea" />
+      <Association Name="Club_UserInClub" Member="UserInClubs" ThisKey="ID" OtherKey="ClubID" Type="UserInClub" />
+      <Association Name="ClimberProfile_Club" Member="ClimberProfile" ThisKey="CreatedByUserID" OtherKey="ID" Type="ClimberProfile" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.ClubInArea" Member="ClubInAreas">
+    <Type Name="ClubInArea">
+      <Column Name="ClubID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AreaTagID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="AreaTag_ClubInArea" Member="AreaTag" ThisKey="AreaTagID" OtherKey="ID" Type="AreaTag" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Club_ClubInArea" Member="Club" ThisKey="ClubID" OtherKey="ID" Type="Club" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.Competition" Member="Competitions">
+    <Type Name="Competition">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FriendlyUrl" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Location" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="ReportedBy" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="ContentDirectory" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="ArticleHeading" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="ArticleTextHtml" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ArticleMainPhoto1" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="ArticleMainPhoto2" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="ArticleMainPhoto3" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="PhotoHeading1" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="PhotoHeading2" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="MetaDescription" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="MetaKeywords" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="MessageBoardID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="MessageBoard_Competition" Member="MessageBoard" ThisKey="MessageBoardID" OtherKey="ID" Type="MessageBoard" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.FeatureArticle" Member="FeatureArticles">
+    <Type Name="FeatureArticle">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FriendlyUrl" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="ReportedBy" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="ContentDirectory" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="ArticleHeading" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="ArticleHtml" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="MetaDescription" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="MetaKeywords" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="MessageBoardID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="FeatureArticle_FeatureArticlePhotoSet" Member="FeatureArticlePhotoSets" ThisKey="ID" OtherKey="FeatureArticleID" Type="FeatureArticlePhotoSet" />
+      <Association Name="MessageBoard_FeatureArticle" Member="MessageBoard" ThisKey="MessageBoardID" OtherKey="ID" Type="MessageBoard" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.FeatureArticlePhotoSet" Member="FeatureArticlePhotoSets">
+    <Type Name="FeatureArticlePhotoSet">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FeatureArticleID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Directory" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Association Name="FeatureArticle_FeatureArticlePhotoSet" Member="FeatureArticle" ThisKey="FeatureArticleID" OtherKey="ID" Type="FeatureArticle" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.Feedback" Member="Feedbacks">
+    <Type Name="Feedback">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FeedbackFromUser" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ResponseFromAdmin" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="DateTimePosted" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DateTimeFirstReplied" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DateTimeLastReviewed" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Association Name="aspnet_User_Feedback" Member="aspnet_User" ThisKey="UserID" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.LogEvent" Member="LogEvents">
+    <Type Name="LogEvent">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="EventType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EventDateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Archived" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.LogExceptionEvent" Member="LogExceptionEvents">
+    <Type Name="LogExceptionEvent">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ExceptionDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="UserEmail" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IP" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Url" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Browser" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="InnerMessage" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="StackTrace" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Reviewed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Archived" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.MainNewsFeedItem" Member="MainNewsFeedItems">
+    <Type Name="MainNewsFeedItem">
+      <Column Name="ID" Type="System.DateTime" DbType="SmallDateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ItemHtml" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.MediaShare" Member="MediaShares">
+    <Type Name="MediaShare">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Uri" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="SubmittedByUserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="SubmittedDateTime" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MessageBoardID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="MediaShare_OutdoorCragMediaShare" Member="OutdoorCragMediaShares" ThisKey="ID" OtherKey="MediaShareID" Type="OutdoorCragMediaShare" />
+      <Association Name="MediaShare_PlaceMediaShare" Member="PlaceMediaShares" ThisKey="ID" OtherKey="MediaShareID" Type="PlaceMediaShare" />
+      <Association Name="ClimberProfile_MediaShare" Member="ClimberProfile" ThisKey="SubmittedByUserID" OtherKey="ID" Type="ClimberProfile" IsForeignKey="true" />
+      <Association Name="MessageBoard_MediaShare" Member="MessageBoard" ThisKey="MessageBoardID" OtherKey="ID" Type="MessageBoard" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.MessageBoard" Member="MessageBoards">
+    <Type Name="MessageBoard">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="MessageBoard_ClimberProfile" Member="ClimberProfiles" ThisKey="ID" OtherKey="MessageBoardID" Type="ClimberProfile" />
+      <Association Name="MessageBoard_Competition" Member="Competitions" ThisKey="ID" OtherKey="MessageBoardID" Type="Competition" />
+      <Association Name="MessageBoard_FeatureArticle" Member="FeatureArticles" ThisKey="ID" OtherKey="MessageBoardID" Type="FeatureArticle" />
+      <Association Name="MessageBoard_MediaShare" Member="MediaShares" ThisKey="ID" OtherKey="MessageBoardID" Type="MediaShare" />
+      <Association Name="MessageBoard_MessageBoardMessage" Member="MessageBoardMessages" ThisKey="ID" OtherKey="MessageBoardID" Type="MessageBoardMessage" />
+      <Association Name="MessageBoard_PlaceOutdoorCrag" Member="PlaceOutdoorCrags" ThisKey="ID" OtherKey="MessageBoardID" Type="PlaceOutdoorCrag" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.MessageBoardMessage" Member="MessageBoardMessages">
+    <Type Name="MessageBoardMessage">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MessageBoardID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Message" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="PostedDateTime" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Association Name="ClimberProfile_MessageBoardMessage" Member="ClimberProfile" ThisKey="UserID" OtherKey="ID" Type="ClimberProfile" IsForeignKey="true" />
+      <Association Name="MessageBoard_MessageBoardMessage" Member="MessageBoard" ThisKey="MessageBoardID" OtherKey="ID" Type="MessageBoard" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.OutdoorCragMediaShare" Member="OutdoorCragMediaShares">
+    <Type Name="OutdoorCragMediaShare">
+      <Column Name="OutdoorCragID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MediaShareID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="MediaShare_OutdoorCragMediaShare" Member="MediaShare" ThisKey="MediaShareID" OtherKey="ID" Type="MediaShare" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="PlaceOutdoorCrag_OutdoorCragMediaShare" Member="PlaceOutdoorCrag" ThisKey="OutdoorCragID" OtherKey="ID" Type="PlaceOutdoorCrag" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.PartnerCallPlace" Member="PartnerCallPlaces">
+    <Type Name="PartnerCallPlace">
+      <Column Name="PartnerCallID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PlaceID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Place_PartnerCallPlace" Member="Place" ThisKey="PlaceID" OtherKey="ID" Type="Place" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="PartnerCall_PartnerCallPlace" Member="PartnerCall" ThisKey="PartnerCallID" OtherKey="ID" Type="PartnerCall" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.PartnerCallReply" Member="PartnerCallReplies">
+    <Type Name="PartnerCallReply">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PartnerCallID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ReplyingUserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ReplyDateTime" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Message" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Unread" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="ClimberProfile_PartnerCallReply" Member="ClimberProfile" ThisKey="ReplyingUserID" OtherKey="ID" Type="ClimberProfile" IsForeignKey="true" />
+      <Association Name="PartnerCall_PartnerCallReply" Member="PartnerCall" ThisKey="PartnerCallID" OtherKey="ID" Type="PartnerCall" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.PartnerCallSubscription" Member="PartnerCallSubscriptions">
+    <Type Name="PartnerCallSubscription">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PlaceID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RSS" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="ClimberProfile_PartnerCallSubscription" Member="ClimberProfile" ThisKey="UserID" OtherKey="ID" Type="ClimberProfile" IsForeignKey="true" />
+      <Association Name="Place_PartnerCallSubscription" Member="Place" ThisKey="PlaceID" OtherKey="ID" Type="Place" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.PlaceIndoorDetails" Member="PlaceIndoorDetails">
+    <Type Name="PlaceIndoorDetail">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="MapAddress" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="LogoImageFile" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Website" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Contact" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Prices" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="HasTopRope" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="HasBoulder" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="HasLead" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Place_PlaceIndoorDetail" Member="Place" ThisKey="ID" OtherKey="ID" Type="Place" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.PlaceMediaShare" Member="PlaceMediaShares">
+    <Type Name="PlaceMediaShare">
+      <Column Name="PlaceID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MediaShareID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="MediaShare_PlaceMediaShare" Member="MediaShare" ThisKey="MediaShareID" OtherKey="ID" Type="MediaShare" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Place_PlaceMediaShare" Member="Place" ThisKey="PlaceID" OtherKey="ID" Type="Place" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.PlaceOutdoorAuthority" Member="PlaceOutdoorAuthorities">
+    <Type Name="PlaceOutdoorAuthority">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PlaceID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Url" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Association Name="PlaceOutdoorDetail_PlaceOutdoorAuthority" Member="PlaceOutdoorDetail" ThisKey="PlaceID" OtherKey="ID" Type="PlaceOutdoorDetail" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.PlaceOutdoorCrag" Member="PlaceOutdoorCrags">
+    <Type Name="PlaceOutdoorCrag">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="FriendlyUrlName" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Mosquitoes" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ClimbingSummerAM" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ClimbingWinterAM" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ClimbingSummerPM" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ClimbingWinterPM" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="History" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Access" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Approach" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="PlaceID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedByUserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="MessageBoardID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="DescriptionImageFile1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DescriptionImageFile2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DescriptionImageFile3" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DescriptionImageFile1ByUserID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="DescriptionImageFile2ByUserID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="DescriptionImageFile3ByUserID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Latitude" Type="System.Decimal" DbType="Decimal(18,12) NOT NULL" CanBeNull="false" />
+      <Column Name="Longitude" Type="System.Decimal" DbType="Decimal(18,12) NOT NULL" CanBeNull="false" />
+      <Column Name="HasTopRope" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="HasBoulder" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="HasLead" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="HasTrad" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="HasSport" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="HasIce" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="HasSolo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="HasDWS" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="HasAlpine" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="HasMultipitch" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="HasBuildering" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="PlaceOutdoorCrag_OutdoorCragMediaShare" Member="OutdoorCragMediaShares" ThisKey="ID" OtherKey="OutdoorCragID" Type="OutdoorCragMediaShare" />
+      <Association Name="ClimberProfile_PlaceOutdoorCrag" Member="ClimberProfile" ThisKey="CreatedByUserID" OtherKey="ID" Type="ClimberProfile" IsForeignKey="true" />
+      <Association Name="ClimberProfile_PlaceOutdoorCrag1" Member="ClimberProfile1" ThisKey="DescriptionImageFile1ByUserID" OtherKey="ID" Type="ClimberProfile" IsForeignKey="true" />
+      <Association Name="ClimberProfile_PlaceOutdoorCrag2" Member="ClimberProfile2" ThisKey="DescriptionImageFile2ByUserID" OtherKey="ID" Type="ClimberProfile" IsForeignKey="true" />
+      <Association Name="ClimberProfile_PlaceOutdoorCrag3" Member="ClimberProfile3" ThisKey="DescriptionImageFile3ByUserID" OtherKey="ID" Type="ClimberProfile" IsForeignKey="true" />
+      <Association Name="MessageBoard_PlaceOutdoorCrag" Member="MessageBoard" ThisKey="MessageBoardID" OtherKey="ID" Type="MessageBoard" IsForeignKey="true" />
+      <Association Name="PlaceOutdoorDetail_PlaceOutdoorCrag" Member="PlaceOutdoorDetail" ThisKey="PlaceID" OtherKey="ID" Type="PlaceOutdoorDetail" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.PlaceOutdoorDetails" Member="PlaceOutdoorDetails">
+    <Type Name="PlaceOutdoorDetail">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DescriptionImageFile" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DescriptionByUserID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="DescriptionLastUpdated" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DescriptionImageFile2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DescriptionImageFile3" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DescriptionImageFileByUserID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="DescriptionImageFile2ByUserID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="DescriptionImageFile3ByUserID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Directions" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Accomodation" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Food" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="LocalBeta" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DetailsAreLocked" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="PlaceOutdoorDetail_PlaceOutdoorAuthority" Member="PlaceOutdoorAuthorities" ThisKey="ID" OtherKey="PlaceID" Type="PlaceOutdoorAuthority" />
+      <Association Name="PlaceOutdoorDetail_PlaceOutdoorCrag" Member="PlaceOutdoorCrags" ThisKey="ID" OtherKey="PlaceID" Type="PlaceOutdoorCrag" />
+      <Association Name="ClimberProfile_PlaceOutdoorDetail" Member="ClimberProfile" ThisKey="DescriptionByUserID" OtherKey="ID" Type="ClimberProfile" IsForeignKey="true" />
+      <Association Name="ClimberProfile_PlaceOutdoorDetail1" Member="ClimberProfile1" ThisKey="DescriptionImageFileByUserID" OtherKey="ID" Type="ClimberProfile" IsForeignKey="true" />
+      <Association Name="ClimberProfile_PlaceOutdoorDetail2" Member="ClimberProfile2" ThisKey="DescriptionImageFile2ByUserID" OtherKey="ID" Type="ClimberProfile" IsForeignKey="true" />
+      <Association Name="ClimberProfile_PlaceOutdoorDetail3" Member="ClimberProfile3" ThisKey="DescriptionImageFile3ByUserID" OtherKey="ID" Type="ClimberProfile" IsForeignKey="true" />
+      <Association Name="Place_PlaceOutdoorDetail" Member="Place" ThisKey="ID" OtherKey="ID" Type="Place" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.PlacesInAreas" Member="PlacesInAreas">
+    <Type Name="PlacesInArea">
+      <Column Name="AreaTagID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PlaceID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="AreaTag_PlacesInArea" Member="AreaTag" ThisKey="AreaTagID" OtherKey="ID" Type="AreaTag" IsForeignKey="true" />
+      <Association Name="Place_PlacesInArea" Member="Place" ThisKey="PlaceID" OtherKey="ID" Type="Place" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.PlaceUserClimbs" Member="PlaceUserClimbs">
+    <Type Name="PlaceUserClimb">
+      <Column Name="PlaceID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.SpecialPagesHTML" Member="SpecialPagesHTMLs">
+    <Type Name="SpecialPagesHTML">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ForPage" Type="System.String" DbType="NChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="PageHtml" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.UserInClub" Member="UserInClubs">
+    <Type Name="UserInClub">
+      <Column Name="ClubID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Club_UserInClub" Member="Club" ThisKey="ClubID" OtherKey="ID" Type="Club" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="ClimberProfile_UserInClub" Member="ClimberProfile" ThisKey="UserID" OtherKey="ID" Type="ClimberProfile" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.UserMessage" Member="UserMessages">
+    <Type Name="UserMessage">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SendingUserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ReceivingUserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Subject" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Message" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="SentDateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="SenderDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ReceiverDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.UserSettings" Member="UserSettings">
+    <Type Name="UserSetting">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PartnerSearchPlaceID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PartnerSearchCountryID" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="PartnerSearchArea" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="PartnerSearchPlaceType" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="HomePartnerCallCountries" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.aspnet_Applications" Member="aspnet_Applications">
+    <Type Name="aspnet_Application">
+      <Column Name="ApplicationName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="LoweredApplicationName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="ApplicationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Association Name="aspnet_Application_aspnet_Membership" Member="aspnet_Memberships" ThisKey="ApplicationId" OtherKey="ApplicationId" Type="aspnet_Membership" />
+      <Association Name="aspnet_Application_aspnet_User" Member="aspnet_Users" ThisKey="ApplicationId" OtherKey="ApplicationId" Type="aspnet_User" />
+    </Type>
+  </Table>
+  <Table Name="dbo.aspnet_Membership" Member="aspnet_Memberships">
+    <Type Name="aspnet_Membership">
+      <Column Name="ApplicationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="PasswordFormat" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PasswordSalt" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="MobilePIN" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="LoweredEmail" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="PasswordQuestion" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="PasswordAnswer" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="IsApproved" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsLockedOut" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastLoginDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastPasswordChangedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastLockoutDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FailedPasswordAttemptCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FailedPasswordAttemptWindowStart" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FailedPasswordAnswerAttemptCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FailedPasswordAnswerAttemptWindowStart" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Comment" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="aspnet_Membership_ClimberProfile" Member="ClimberProfile" ThisKey="UserId" OtherKey="ID" Type="ClimberProfile" Cardinality="One" />
+      <Association Name="aspnet_Application_aspnet_Membership" Member="aspnet_Application" ThisKey="ApplicationId" OtherKey="ApplicationId" Type="aspnet_Application" IsForeignKey="true" />
+      <Association Name="aspnet_User_aspnet_Membership" Member="aspnet_User" ThisKey="UserId" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.aspnet_Profile" Member="aspnet_Profiles">
+    <Type Name="aspnet_Profile">
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PropertyNames" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="PropertyValuesString" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="PropertyValuesBinary" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="LastUpdatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="aspnet_User_aspnet_Profile" Member="aspnet_User" ThisKey="UserId" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.aspnet_Users" Member="aspnet_Users">
+    <Type Name="aspnet_User">
+      <Column Name="ApplicationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="LoweredUserName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="MobileAlias" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="IsAnonymous" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LastActivityDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="aspnet_User_ClimberProfile" Member="ClimberProfile" ThisKey="UserId" OtherKey="ID" Type="ClimberProfile" Cardinality="One" />
+      <Association Name="aspnet_User_Feedback" Member="Feedbacks" ThisKey="UserId" OtherKey="UserID" Type="Feedback" />
+      <Association Name="aspnet_User_aspnet_Membership" Member="aspnet_Membership" ThisKey="UserId" OtherKey="UserId" Type="aspnet_Membership" Cardinality="One" />
+      <Association Name="aspnet_User_aspnet_Profile" Member="aspnet_Profile" ThisKey="UserId" OtherKey="UserId" Type="aspnet_Profile" Cardinality="One" />
+      <Association Name="aspnet_Application_aspnet_User" Member="aspnet_Application" ThisKey="ApplicationId" OtherKey="ApplicationId" Type="aspnet_Application" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.Place" Member="Places">
+    <Type Name="Place">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="ShortName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CountryID" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FriendlyUrlName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="FriendlyUrlLocation" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="MetaKeywords" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="MetaDescription" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="IsIndoor" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Latitude" Type="System.Decimal" DbType="Decimal(18,12) NOT NULL" CanBeNull="false" />
+      <Column Name="Longitude" Type="System.Decimal" DbType="Decimal(18,12) NOT NULL" CanBeNull="false" />
+      <Column Name="MessageBoardID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PrimaryImageFile" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CreatedByUserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="Place_PartnerCallPlace" Member="PartnerCallPlaces" ThisKey="ID" OtherKey="PlaceID" Type="PartnerCallPlace" />
+      <Association Name="Place_PartnerCallSubscription" Member="PartnerCallSubscriptions" ThisKey="ID" OtherKey="PlaceID" Type="PartnerCallSubscription" />
+      <Association Name="Place_PlaceIndoorDetail" Member="PlaceIndoorDetail" ThisKey="ID" OtherKey="ID" Type="PlaceIndoorDetail" Cardinality="One" />
+      <Association Name="Place_PlaceMediaShare" Member="PlaceMediaShares" ThisKey="ID" OtherKey="PlaceID" Type="PlaceMediaShare" />
+      <Association Name="Place_PlaceOutdoorDetail" Member="PlaceOutdoorDetail" ThisKey="ID" OtherKey="ID" Type="PlaceOutdoorDetail" Cardinality="One" />
+      <Association Name="Place_PlacesInArea" Member="PlacesInAreas" ThisKey="ID" OtherKey="PlaceID" Type="PlacesInArea" />
+      <Association Name="ClimberProfile_Place" Member="ClimberProfile" ThisKey="CreatedByUserID" OtherKey="ID" Type="ClimberProfile" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.PartnerCallSurvey" Member="PartnerCallSurveys">
+    <Type Name="PartnerCallSurvey">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PartnerCallID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Reason" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="NumberOfPeopleWhoContacted" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DeletedDateTime" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Association Name="PartnerCall_PartnerCallSurvey" Member="PartnerCall" ThisKey="PartnerCallID" OtherKey="ID" Type="PartnerCall" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.PartnerCall" Member="PartnerCalls">
+    <Type Name="PartnerCall">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClimberProfileID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="ToAlpine" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ToBoulder" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ToTopRope" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ToTrad" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ToLeadClimb" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Message" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="IsIndoor" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PostedDateTime" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CountryID" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="HiddenOnGymPartnerPage" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="PartnerCall_PartnerCallPlace" Member="PartnerCallPlaces" ThisKey="ID" OtherKey="PartnerCallID" Type="PartnerCallPlace" />
+      <Association Name="PartnerCall_PartnerCallReply" Member="PartnerCallReplies" ThisKey="ID" OtherKey="PartnerCallID" Type="PartnerCallReply" />
+      <Association Name="PartnerCall_PartnerCallSurvey" Member="PartnerCallSurveys" ThisKey="ID" OtherKey="PartnerCallID" Type="PartnerCallSurvey" />
+      <Association Name="ClimberProfile_PartnerCall" Member="ClimberProfile" ThisKey="ClimberProfileID" OtherKey="ID" Type="ClimberProfile" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.PartnerWidgetCSS" Member="PartnerWidgetCSSes">
+    <Type Name="PartnerWidgetCSS">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CSS" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Results" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="AdminEmail" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="WidgetVersion" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

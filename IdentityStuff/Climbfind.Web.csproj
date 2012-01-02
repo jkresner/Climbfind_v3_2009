@@ -1,0 +1,1964 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B71EDE6E-6A77-49B2-960C-5EF74B4C1680}</ProjectGuid>
+    <ProjectTypeGuids>{F85E285D-A4E0-4152-9332-AB1D724D3325};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IdentityStuff</RootNamespace>
+    <AssemblyName>IdentityStuff</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspMvcP4, Version=1.0.0.0, Culture=neutral, PublicKeyToken=63e5f720df8ebe1e, processorArchitecture=MSIL" />
+    <Reference Include="PeterBlum.VAM, Version=3.0.8.5000, Culture=neutral, PublicKeyToken=76d6c019e89ec3c9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Inetpub\wwwroot\ClimbFind\ClimbFind\bin\Debug\PeterBlum.VAM.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\ActionFilters\AdminActionFilter.cs" />
+    <Compile Include="Controllers\ActionFilters\ModeratorActionFilter.cs" />
+    <Compile Include="Controllers\ActionFilters\LoginActionFilter.cs" />
+    <Compile Include="Controllers\ActionResults\RssActionResult.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\ClimberProfilesController.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
+    <Compile Include="Controllers\ClubsController.cs" />
+    <Compile Include="Controllers\AdsController.cs" />
+    <Compile Include="Controllers\CFFeedController.cs" />
+    <Compile Include="Controllers\TodosController.cs" />
+    <Compile Include="Controllers\MediaController.cs" />
+    <Compile Include="Controllers\ModerateController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="Controllers\SharedController.cs" />
+    <Compile Include="Controllers\PlacesController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PartnerCallsController.cs" />
+    <Compile Include="Controllers\ActionFilters\ProfileCompleteActionFilter.cs" />
+    <Compile Include="Controls\AdUnits\AmazonProductLink.ascx.cs">
+      <DependentUpon>AmazonProductLink.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AdUnits\AmazonProductLink.ascx.designer.cs">
+      <DependentUpon>AmazonProductLink.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AdUnits\CF3Homepage160x600Banner.ascx.cs">
+      <DependentUpon>CF3Homepage160x600Banner.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AdUnits\CF3Homepage160x600Banner.ascx.designer.cs">
+      <DependentUpon>CF3Homepage160x600Banner.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AdUnits\ClimbfindAds.ascx.cs">
+      <DependentUpon>ClimbfindAds.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AdUnits\ClimbfindAds.ascx.designer.cs">
+      <DependentUpon>ClimbfindAds.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AdUnits\AreaMapRight160x600.ascx.cs">
+      <DependentUpon>AreaMapRight160x600.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AdUnits\AreaMapRight160x600.ascx.designer.cs">
+      <DependentUpon>AreaMapRight160x600.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AdUnits\IndoorPlaceDetailsRight160x600.ascx.cs">
+      <DependentUpon>IndoorPlaceDetailsRight160x600.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AdUnits\IndoorPlaceDetailsRight160x600.ascx.designer.cs">
+      <DependentUpon>IndoorPlaceDetailsRight160x600.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AdUnits\InputFormRight160x600.ascx.cs">
+      <DependentUpon>InputFormRight160x600.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AdUnits\InputFormRight160x600.ascx.designer.cs">
+      <DependentUpon>InputFormRight160x600.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AdUnits\Google160x600.ascx.cs">
+      <DependentUpon>Google160x600.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AdUnits\Google160x600.ascx.designer.cs">
+      <DependentUpon>Google160x600.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AdUnits\ProfileAds.ascx.cs">
+      <DependentUpon>ProfileAds.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AdUnits\ProfileAds.ascx.designer.cs">
+      <DependentUpon>ProfileAds.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CFControls.cs" />
+    <Compile Include="Controls\ClimbFindProfileFull.ascx.cs">
+      <DependentUpon>ClimbFindProfileFull.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ClimbFindProfileFull.ascx.designer.cs">
+      <DependentUpon>ClimbFindProfileFull.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Content\AboutGroups.ascx.cs">
+      <DependentUpon>AboutGroups.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Content\AboutGroups.ascx.designer.cs">
+      <DependentUpon>AboutGroups.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Content\AboutRollCalls.ascx.cs">
+      <DependentUpon>AboutRollCalls.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Content\AboutRollCalls.ascx.designer.cs">
+      <DependentUpon>AboutRollCalls.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CFAdControls.cs" />
+    <Compile Include="Controls\MapBuilder.cs" />
+    <Compile Include="Controls\MapCoordinatePicker.ascx.cs">
+      <DependentUpon>MapCoordinatePicker.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MapCoordinatePicker.ascx.designer.cs">
+      <DependentUpon>MapCoordinatePicker.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PlacePickerGoTo.ascx.cs">
+      <DependentUpon>PlacePickerGoTo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\PlacePickerGoTo.ascx.designer.cs">
+      <DependentUpon>PlacePickerGoTo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LoginOrRegister.ascx.cs">
+      <DependentUpon>LoginOrRegister.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\LoginOrRegister.ascx.designer.cs">
+      <DependentUpon>LoginOrRegister.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MessageBoard.ascx.cs">
+      <DependentUpon>MessageBoard.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MessageBoard.ascx.designer.cs">
+      <DependentUpon>MessageBoard.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PaypalDonateButton.ascx.cs">
+      <DependentUpon>PaypalDonateButton.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\PaypalDonateButton.ascx.designer.cs">
+      <DependentUpon>PaypalDonateButton.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PlacePicker.ascx.cs">
+      <DependentUpon>PlacePicker.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\PlacePicker.ascx.designer.cs">
+      <DependentUpon>PlacePicker.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StarRating.ascx.cs">
+      <DependentUpon>StarRating.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\StarRating.ascx.designer.cs">
+      <DependentUpon>StarRating.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TextBoxCharacterCounter.ascx.cs">
+      <DependentUpon>TextBoxCharacterCounter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TextBoxCharacterCounter.ascx.designer.cs">
+      <DependentUpon>TextBoxCharacterCounter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TextBox\AreaPicker.ascx.cs">
+      <DependentUpon>AreaPicker.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TextBox\AreaPicker.ascx.designer.cs">
+      <DependentUpon>AreaPicker.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Validators\BaseVAL.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Validators\PlaceName.ascx.cs">
+      <DependentUpon>PlaceName.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Validators\PlaceName.ascx.designer.cs">
+      <DependentUpon>PlaceName.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Validators\Email.ascx.cs">
+      <DependentUpon>Email.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Validators\Email.ascx.designer.cs">
+      <DependentUpon>Email.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Validators\FullName.ascx.cs">
+      <DependentUpon>FullName.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Validators\FullName.ascx.designer.cs">
+      <DependentUpon>FullName.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Validators\GroupName.ascx.cs">
+      <DependentUpon>GroupName.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Validators\GroupName.ascx.designer.cs">
+      <DependentUpon>GroupName.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Validators\Length.ascx.cs">
+      <DependentUpon>Length.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Validators\Length.ascx.designer.cs">
+      <DependentUpon>Length.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Validators\Message.ascx.cs">
+      <DependentUpon>Message.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Validators\Message.ascx.designer.cs">
+      <DependentUpon>Message.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Validators\Password.ascx.cs">
+      <DependentUpon>Password.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Validators\Password.ascx.designer.cs">
+      <DependentUpon>Password.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewData\ClimberProfilesWriteMessageViewData.cs" />
+    <Compile Include="Models\ViewData\ClimberProfileViewData.cs" />
+    <Compile Include="Models\ViewData\PartnerCallEditViewData.cs" />
+    <Compile Include="Models\ViewData\PartnerCallShowReplyViewData.cs" />
+    <Compile Include="Models\ViewData\PartnerCallReplyViewData.cs" />
+    <Compile Include="Models\ViewData\IClimbFindBaseViewData.cs" />
+    <Compile Include="Models\ViewData\ISessionViewData.cs" />
+    <Compile Include="Models\ViewData\LoginViewData.cs" />
+    <Compile Include="Models\ViewData\PartnerSearchViewData.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Adapters\BaseControlAdapter.cs" />
+    <Compile Include="UI\Adapters\ChangePasswordControlAdapter.cs" />
+    <Compile Include="UI\Adapters\CreateUserWizardControlAdapter.cs" />
+    <Compile Include="UI\Adapters\DropDownListAdapter.cs" />
+    <Compile Include="UI\Adapters\LoginControlAdapter.cs" />
+    <Compile Include="UI\Adapters\PasswordRecoveryControlAdapter.cs" />
+    <Compile Include="UI\BaseControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BaseViewPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BaseViewUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ClimbFindControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ClimbFindViewPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ClimbFindViewUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\Breadcrum.cs" />
+    <Compile Include="UI\Controls\DropDownLists\AbstractDDL.cs" />
+    <Compile Include="UI\Controls\DropDownLists\AreaDDL.cs" />
+    <Compile Include="UI\Controls\DropDownLists\AreaTagDDL.cs" />
+    <Compile Include="UI\Controls\DropDownLists\OutdoorClimbingTypeDDL.cs" />
+    <Compile Include="UI\Controls\DropDownLists\NationalityDDL.cs" />
+    <Compile Include="UI\PageMetaInfoGenerator.cs" />
+    <Compile Include="Views\Admin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\ClubsList.aspx.cs">
+      <DependentUpon>ClubsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\ClubsList.aspx.designer.cs">
+      <DependentUpon>ClubsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\DeleteCachedDiskImages.aspx.cs">
+      <DependentUpon>DeleteCachedDiskImages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\DeleteCachedDiskImages.aspx.designer.cs">
+      <DependentUpon>DeleteCachedDiskImages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\GenerateUrlGonePage.aspx.cs">
+      <DependentUpon>GenerateUrlGonePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\GenerateUrlGonePage.aspx.designer.cs">
+      <DependentUpon>GenerateUrlGonePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\GenerateSiteMap.aspx.cs">
+      <DependentUpon>GenerateSiteMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\GenerateSiteMap.aspx.designer.cs">
+      <DependentUpon>GenerateSiteMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\GuidGenerator.aspx.cs">
+      <DependentUpon>GuidGenerator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\GuidGenerator.aspx.designer.cs">
+      <DependentUpon>GuidGenerator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ads\Purchase.aspx.cs">
+      <DependentUpon>Purchase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Ads\Purchase.aspx.designer.cs">
+      <DependentUpon>Purchase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ads\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Ads\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ads\Report.aspx.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Ads\Report.aspx.designer.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Blog\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Blog\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CFFeed\AboutFeedTags.aspx.cs">
+      <DependentUpon>AboutFeedTags.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\CFFeed\AboutFeedTags.aspx.designer.cs">
+      <DependentUpon>AboutFeedTags.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CFFeed\ClimbersImWatching.aspx.cs">
+      <DependentUpon>ClimbersImWatching.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\CFFeed\ClimbersImWatching.aspx.designer.cs">
+      <DependentUpon>ClimbersImWatching.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CFFeed\CommentOnPost.aspx.cs">
+      <DependentUpon>CommentOnPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\CFFeed\CommentOnPost.aspx.designer.cs">
+      <DependentUpon>CommentOnPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CFFeed\ClimbersWatchingMe.aspx.cs">
+      <DependentUpon>ClimbersWatchingMe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\CFFeed\ClimbersWatchingMe.aspx.designer.cs">
+      <DependentUpon>ClimbersWatchingMe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CFFeed\FeedItemList.ascx.cs">
+      <DependentUpon>FeedItemList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\CFFeed\FeedItemList.ascx.designer.cs">
+      <DependentUpon>FeedItemList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CFFeed\FirstPost.aspx.cs">
+      <DependentUpon>FirstPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\CFFeed\FirstPost.aspx.designer.cs">
+      <DependentUpon>FirstPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CFFeed\PublicFeed.ascx.cs">
+      <DependentUpon>PublicFeed.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\CFFeed\PublicFeed.ascx.designer.cs">
+      <DependentUpon>PublicFeed.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CFFeed\FindClimbersForWatchList.aspx.cs">
+      <DependentUpon>FindClimbersForWatchList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\CFFeed\FindClimbersForWatchList.aspx.designer.cs">
+      <DependentUpon>FindClimbersForWatchList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CFFeed\Feed.ascx.cs">
+      <DependentUpon>Feed.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\CFFeed\Feed.ascx.designer.cs">
+      <DependentUpon>Feed.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CFFeed\NewPost.aspx.cs">
+      <DependentUpon>NewPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\CFFeed\NewPost.aspx.designer.cs">
+      <DependentUpon>NewPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CFFeed\NewPostPlace.aspx.cs">
+      <DependentUpon>NewPostPlace.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\CFFeed\NewPostPlace.aspx.designer.cs">
+      <DependentUpon>NewPostPlace.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\All.aspx.cs">
+      <DependentUpon>All.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\All.aspx.designer.cs">
+      <DependentUpon>All.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\AllCache.ascx.cs">
+      <DependentUpon>AllCache.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\AllCache.ascx.designer.cs">
+      <DependentUpon>AllCache.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SubscribeToPartnerCallsWhereIClimb.ascx.cs">
+      <DependentUpon>SubscribeToPartnerCallsWhereIClimb.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SubscribeToPartnerCallsWhereIClimb.ascx.designer.cs">
+      <DependentUpon>SubscribeToPartnerCallsWhereIClimb.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\AllWhatILike.aspx.cs">
+      <DependentUpon>AllWhatILike.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\AllWhatILike.aspx.designer.cs">
+      <DependentUpon>AllWhatILike.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\Moderators.aspx.cs">
+      <DependentUpon>Moderators.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\Moderators.aspx.designer.cs">
+      <DependentUpon>Moderators.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\VerifyEmailAddress.aspx.cs">
+      <DependentUpon>VerifyEmailAddress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\VerifyEmailAddress.aspx.designer.cs">
+      <DependentUpon>VerifyEmailAddress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\MyMediaList.ascx.cs">
+      <DependentUpon>MyMediaList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\MyMediaList.ascx.designer.cs">
+      <DependentUpon>MyMediaList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\AboutPartnerWidget.aspx.cs">
+      <DependentUpon>AboutPartnerWidget.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\AboutPartnerWidget.aspx.designer.cs">
+      <DependentUpon>AboutPartnerWidget.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\AboutProfileExample.aspx.cs">
+      <DependentUpon>AboutProfileExample.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\AboutProfileExample.aspx.designer.cs">
+      <DependentUpon>AboutProfileExample.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\CF3BetaBrief.aspx.cs">
+      <DependentUpon>CF3BetaBrief.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\CF3BetaBrief.aspx.designer.cs">
+      <DependentUpon>CF3BetaBrief.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\PGIndex.aspx.cs">
+      <DependentUpon>PGIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\PGIndex.aspx.designer.cs">
+      <DependentUpon>PGIndex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\IndexBlogFeed.ascx.cs">
+      <DependentUpon>IndexBlogFeed.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\IndexBlogFeed.ascx.designer.cs">
+      <DependentUpon>IndexBlogFeed.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\HomepageSettings.aspx.cs">
+      <DependentUpon>HomepageSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\HomepageSettings.aspx.designer.cs">
+      <DependentUpon>HomepageSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\IndexAuthenticated.aspx.cs">
+      <DependentUpon>IndexAuthenticated.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\IndexAuthenticated.aspx.designer.cs">
+      <DependentUpon>IndexAuthenticated.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\IndexSiteAffiliates.ascx.cs">
+      <DependentUpon>IndexSiteAffiliates.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\IndexSiteAffiliates.ascx.designer.cs">
+      <DependentUpon>IndexSiteAffiliates.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\IndexMovieFeed.ascx.cs">
+      <DependentUpon>IndexMovieFeed.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\IndexMovieFeed.ascx.designer.cs">
+      <DependentUpon>IndexMovieFeed.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\ForIndoorClimbingBusinesses.aspx.cs">
+      <DependentUpon>ForIndoorClimbingBusinesses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\ForIndoorClimbingBusinesses.aspx.designer.cs">
+      <DependentUpon>ForIndoorClimbingBusinesses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CFFeed\PlaceGoingClimbingTxB.ascx.cs">
+      <DependentUpon>PlaceGoingClimbingTxB.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\CFFeed\PlaceGoingClimbingTxB.ascx.designer.cs">
+      <DependentUpon>PlaceGoingClimbingTxB.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\IndexToDo.ascx.cs">
+      <DependentUpon>IndexToDo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\IndexToDo.ascx.designer.cs">
+      <DependentUpon>IndexToDo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PartnerCalls\Notifications.aspx.cs">
+      <DependentUpon>Notifications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\PartnerCalls\Notifications.aspx.designer.cs">
+      <DependentUpon>Notifications.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\Sent.aspx.cs">
+      <DependentUpon>Sent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\Sent.aspx.designer.cs">
+      <DependentUpon>Sent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\ProfileLinkWithPictureList.ascx.cs">
+      <DependentUpon>ProfileLinkWithPictureList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\ProfileLinkWithPictureList.ascx.designer.cs">
+      <DependentUpon>ProfileLinkWithPictureList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\ClubsIBelongTo.ascx.cs">
+      <DependentUpon>ClubsIBelongTo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\ClubsIBelongTo.ascx.designer.cs">
+      <DependentUpon>ClubsIBelongTo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Clubs\Detail.aspx.cs">
+      <DependentUpon>Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Clubs\Detail.aspx.designer.cs">
+      <DependentUpon>Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Clubs\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Clubs\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Clubs\New.aspx.cs">
+      <DependentUpon>New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Clubs\New.aspx.designer.cs">
+      <DependentUpon>New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\Contribute.aspx.cs">
+      <DependentUpon>Contribute.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\Contribute.aspx.designer.cs">
+      <DependentUpon>Contribute.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\Promote.aspx.cs">
+      <DependentUpon>Promote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\Promote.aspx.designer.cs">
+      <DependentUpon>Promote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\Friends.aspx.cs">
+      <DependentUpon>Friends.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\Friends.aspx.designer.cs">
+      <DependentUpon>Friends.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\Inbox.aspx.cs">
+      <DependentUpon>Inbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\Inbox.aspx.designer.cs">
+      <DependentUpon>Inbox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Media\AddCragYouTube.aspx.cs">
+      <DependentUpon>AddCragYouTube.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Media\AddCragYouTube.aspx.designer.cs">
+      <DependentUpon>AddCragYouTube.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Media\SubmitMovie.aspx.cs">
+      <DependentUpon>SubmitMovie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Media\SubmitMovie.aspx.designer.cs">
+      <DependentUpon>SubmitMovie.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Media\UsersMedia.aspx.cs">
+      <DependentUpon>UsersMedia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Media\UsersMedia.aspx.designer.cs">
+      <DependentUpon>UsersMedia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Media\Detail.aspx.cs">
+      <DependentUpon>Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Media\Detail.aspx.designer.cs">
+      <DependentUpon>Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Media\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Media\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Moderate\AddIndoorPlace.aspx.cs">
+      <DependentUpon>AddIndoorPlace.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Moderate\AddIndoorPlace.aspx.designer.cs">
+      <DependentUpon>AddIndoorPlace.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Media\AddPlaceYouTube.aspx.cs">
+      <DependentUpon>AddPlaceYouTube.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Media\AddPlaceYouTube.aspx.designer.cs">
+      <DependentUpon>AddPlaceYouTube.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Moderate\AddOutdoorCrag.aspx.cs">
+      <DependentUpon>AddOutdoorCrag.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Moderate\AddOutdoorCrag.aspx.designer.cs">
+      <DependentUpon>AddOutdoorCrag.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Media\EditOutdoorCragPictures.aspx.cs">
+      <DependentUpon>EditOutdoorCragPictures.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Media\EditOutdoorCragPictures.aspx.designer.cs">
+      <DependentUpon>EditOutdoorCragPictures.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Moderate\AddAreaTag.aspx.cs">
+      <DependentUpon>AddAreaTag.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Moderate\AddAreaTag.aspx.designer.cs">
+      <DependentUpon>AddAreaTag.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Moderate\AreaTagForCountryTxB.ascx.cs">
+      <DependentUpon>AreaTagForCountryTxB.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Moderate\AreaTagForCountryTxB.ascx.designer.cs">
+      <DependentUpon>AreaTagForCountryTxB.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Moderate\AreaTagList.aspx.cs">
+      <DependentUpon>AreaTagList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Moderate\AreaTagList.aspx.designer.cs">
+      <DependentUpon>AreaTagList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Moderate\EditPlaceMap.aspx.cs">
+      <DependentUpon>EditPlaceMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Moderate\EditPlaceMap.aspx.designer.cs">
+      <DependentUpon>EditPlaceMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Moderate\OutdoorCragList.aspx.cs">
+      <DependentUpon>OutdoorCragList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Moderate\OutdoorCragList.aspx.designer.cs">
+      <DependentUpon>OutdoorCragList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Moderate\EditOutdoorAuthoritySites.aspx.cs">
+      <DependentUpon>EditOutdoorAuthoritySites.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Moderate\EditOutdoorAuthoritySites.aspx.designer.cs">
+      <DependentUpon>EditOutdoorAuthoritySites.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Moderate\EditAreaTag.aspx.cs">
+      <DependentUpon>EditAreaTag.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Moderate\EditAreaTag.aspx.designer.cs">
+      <DependentUpon>EditAreaTag.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Moderate\EditOutdoorCrag.aspx.cs">
+      <DependentUpon>EditOutdoorCrag.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Moderate\EditOutdoorCrag.aspx.designer.cs">
+      <DependentUpon>EditOutdoorCrag.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Moderate\EditPlaceAreaTags.aspx.cs">
+      <DependentUpon>EditPlaceAreaTags.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Moderate\EditPlaceAreaTags.aspx.designer.cs">
+      <DependentUpon>EditPlaceAreaTags.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Moderate\EditClub.aspx.cs">
+      <DependentUpon>EditClub.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Moderate\EditClub.aspx.designer.cs">
+      <DependentUpon>EditClub.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Moderate\EditClubLogo.aspx.cs">
+      <DependentUpon>EditClubLogo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Moderate\EditClubLogo.aspx.designer.cs">
+      <DependentUpon>EditClubLogo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Moderate\EditPlaceMedia.aspx.cs">
+      <DependentUpon>EditPlaceMedia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Moderate\EditPlaceMedia.aspx.designer.cs">
+      <DependentUpon>EditPlaceMedia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Moderate\OutdoorPlaceList.aspx.cs">
+      <DependentUpon>OutdoorPlaceList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Moderate\OutdoorPlaceList.aspx.designer.cs">
+      <DependentUpon>OutdoorPlaceList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Moderate\EditIndoorPlaceLogo.aspx.cs">
+      <DependentUpon>EditIndoorPlaceLogo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Moderate\EditIndoorPlaceLogo.aspx.designer.cs">
+      <DependentUpon>EditIndoorPlaceLogo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Moderate\EditIndoorPlace.aspx.cs">
+      <DependentUpon>EditIndoorPlace.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Moderate\EditIndoorPlace.aspx.designer.cs">
+      <DependentUpon>EditIndoorPlace.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Moderate\IndoorPlaceList.aspx.cs">
+      <DependentUpon>IndoorPlaceList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Moderate\IndoorPlaceList.aspx.designer.cs">
+      <DependentUpon>IndoorPlaceList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Moderate\PlaceChecker.ascx.cs">
+      <DependentUpon>PlaceChecker.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Moderate\PlaceChecker.ascx.designer.cs">
+      <DependentUpon>PlaceChecker.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PartnerCalls\ByPlace.aspx.cs">
+      <DependentUpon>ByPlace.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\PartnerCalls\ByPlace.aspx.designer.cs">
+      <DependentUpon>ByPlace.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PartnerCalls\ByPlaceCache.ascx.cs">
+      <DependentUpon>ByPlaceCache.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\PartnerCalls\ByPlaceCache.ascx.designer.cs">
+      <DependentUpon>ByPlaceCache.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PartnerCalls\PartnerCustomWidget.aspx.cs">
+      <DependentUpon>PartnerCustomWidget.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\PartnerCalls\PartnerCustomWidget.aspx.designer.cs">
+      <DependentUpon>PartnerCustomWidget.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PartnerCalls\PartnerAreaWidget.aspx.cs">
+      <DependentUpon>PartnerAreaWidget.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\PartnerCalls\PartnerAreaWidget.aspx.designer.cs">
+      <DependentUpon>PartnerAreaWidget.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Places\PartnerWidget2.aspx.cs">
+      <DependentUpon>PartnerWidget2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Places\PartnerWidget2.aspx.designer.cs">
+      <DependentUpon>PartnerWidget2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Places\IndoorMapCache.ascx.cs">
+      <DependentUpon>IndoorMapCache.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Places\IndoorMapCache.ascx.designer.cs">
+      <DependentUpon>IndoorMapCache.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Places\Indoor.aspx.cs">
+      <DependentUpon>Indoor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Places\Indoor.aspx.designer.cs">
+      <DependentUpon>Indoor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Places\OutdoorMapCache.ascx.cs">
+      <DependentUpon>OutdoorMapCache.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Places\OutdoorMapCache.ascx.designer.cs">
+      <DependentUpon>OutdoorMapCache.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Places\FilterAreaSearch.aspx.cs">
+      <DependentUpon>FilterAreaSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Places\FilterAreaSearch.aspx.designer.cs">
+      <DependentUpon>FilterAreaSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Places\FilterGoTo.aspx.cs">
+      <DependentUpon>FilterGoTo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Places\FilterGoTo.aspx.designer.cs">
+      <DependentUpon>FilterGoTo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PartnerCalls\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\PartnerCalls\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PartnerCalls\ConfirmDelete.aspx.cs">
+      <DependentUpon>ConfirmDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\PartnerCalls\ConfirmDelete.aspx.designer.cs">
+      <DependentUpon>ConfirmDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PartnerCalls\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\PartnerCalls\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Places\AreaPage.aspx.cs">
+      <DependentUpon>AreaPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Places\AreaPage.aspx.designer.cs">
+      <DependentUpon>AreaPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PartnerCalls\Subscribe.aspx.cs">
+      <DependentUpon>Subscribe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\PartnerCalls\Subscribe.aspx.designer.cs">
+      <DependentUpon>Subscribe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Places\DetailIndoor.aspx.cs">
+      <DependentUpon>DetailIndoor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Places\DetailIndoor.aspx.designer.cs">
+      <DependentUpon>DetailIndoor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Places\FilterSearch.aspx.cs">
+      <DependentUpon>FilterSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Places\FilterSearch.aspx.designer.cs">
+      <DependentUpon>FilterSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Places\SeekingPartnersRSS.aspx.cs">
+      <DependentUpon>SeekingPartnersRSS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Places\SeekingPartnersRSS.aspx.designer.cs">
+      <DependentUpon>SeekingPartnersRSS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Places\SeekingPartners.aspx.cs">
+      <DependentUpon>SeekingPartners.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Places\SeekingPartners.aspx.designer.cs">
+      <DependentUpon>SeekingPartners.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Places\DetailPlaceRegularsSampleCache.ascx.cs">
+      <DependentUpon>DetailPlaceRegularsSampleCache.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Places\DetailPlaceRegularsSampleCache.ascx.designer.cs">
+      <DependentUpon>DetailPlaceRegularsSampleCache.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Places\WorldMap.aspx.cs">
+      <DependentUpon>WorldMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Places\WorldMap.aspx.designer.cs">
+      <DependentUpon>WorldMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Places\Outdoor.aspx.cs">
+      <DependentUpon>Outdoor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Places\Outdoor.aspx.designer.cs">
+      <DependentUpon>Outdoor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Places\PartnerWidget.aspx.cs">
+      <DependentUpon>PartnerWidget.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Places\PartnerWidget.aspx.designer.cs">
+      <DependentUpon>PartnerWidget.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Places\CragsList.ascx.cs">
+      <DependentUpon>CragsList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Places\CragsList.ascx.designer.cs">
+      <DependentUpon>CragsList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Places\DetailCrag.aspx.cs">
+      <DependentUpon>DetailCrag.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Places\DetailCrag.aspx.designer.cs">
+      <DependentUpon>DetailCrag.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\PlaceList.aspx.cs">
+      <DependentUpon>PlaceList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\PlaceList.aspx.designer.cs">
+      <DependentUpon>PlaceList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\ExceptionsList.aspx.cs">
+      <DependentUpon>ExceptionsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\ExceptionsList.aspx.designer.cs">
+      <DependentUpon>ExceptionsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\Feedback.aspx.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\Feedback.aspx.designer.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\LogList.aspx.cs">
+      <DependentUpon>LogList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\LogList.aspx.designer.cs">
+      <DependentUpon>LogList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\MessageBoardPosts.aspx.cs">
+      <DependentUpon>MessageBoardPosts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\MessageBoardPosts.aspx.designer.cs">
+      <DependentUpon>MessageBoardPosts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\UsersList.aspx.cs">
+      <DependentUpon>UsersList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\UsersList.aspx.designer.cs">
+      <DependentUpon>UsersList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\ConfirmDeleteMe.aspx.cs">
+      <DependentUpon>ConfirmDeleteMe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\ConfirmDeleteMe.aspx.designer.cs">
+      <DependentUpon>ConfirmDeleteMe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\EditOutdoorPlaces.aspx.cs">
+      <DependentUpon>EditOutdoorPlaces.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\EditOutdoorPlaces.aspx.designer.cs">
+      <DependentUpon>EditOutdoorPlaces.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\EditPartnerStatus.aspx.cs">
+      <DependentUpon>EditPartnerStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\EditPartnerStatus.aspx.designer.cs">
+      <DependentUpon>EditPartnerStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\EditExtendedProfile.aspx.cs">
+      <DependentUpon>EditExtendedProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\EditExtendedProfile.aspx.designer.cs">
+      <DependentUpon>EditExtendedProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\ExtendedProfile.ascx.cs">
+      <DependentUpon>ExtendedProfile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\ExtendedProfile.ascx.designer.cs">
+      <DependentUpon>ExtendedProfile.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\PlacesIClimb.ascx.cs">
+      <DependentUpon>PlacesIClimb.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\PlacesIClimb.ascx.designer.cs">
+      <DependentUpon>PlacesIClimb.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\EditIndoorPlaces.aspx.cs">
+      <DependentUpon>EditIndoorPlaces.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\EditIndoorPlaces.aspx.designer.cs">
+      <DependentUpon>EditIndoorPlaces.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\EditFirstTime.aspx.cs">
+      <DependentUpon>EditFirstTime.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\EditFirstTime.aspx.designer.cs">
+      <DependentUpon>EditFirstTime.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\Detail.aspx.cs">
+      <DependentUpon>Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\Detail.aspx.designer.cs">
+      <DependentUpon>Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\DetailShort.ascx.cs">
+      <DependentUpon>DetailShort.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\DetailShort.ascx.designer.cs">
+      <DependentUpon>DetailShort.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\EditPicture.aspx.cs">
+      <DependentUpon>EditPicture.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\EditPicture.aspx.designer.cs">
+      <DependentUpon>EditPicture.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\Me.aspx.cs">
+      <DependentUpon>Me.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\Me.aspx.designer.cs">
+      <DependentUpon>Me.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\RegularsShortlist.ascx.cs">
+      <DependentUpon>RegularsShortlist.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\RegularsShortlist.ascx.designer.cs">
+      <DependentUpon>RegularsShortlist.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\WriteMessage.aspx.cs">
+      <DependentUpon>WriteMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ClimberProfiles\WriteMessage.aspx.designer.cs">
+      <DependentUpon>WriteMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\GradeConverter.aspx.cs">
+      <DependentUpon>GradeConverter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\GradeConverter.aspx.designer.cs">
+      <DependentUpon>GradeConverter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\Glossary.aspx.cs">
+      <DependentUpon>Glossary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\Glossary.aspx.designer.cs">
+      <DependentUpon>Glossary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\Find.aspx.cs">
+      <DependentUpon>Find.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\Find.aspx.designer.cs">
+      <DependentUpon>Find.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\Join.aspx.cs">
+      <DependentUpon>Join.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\Join.aspx.designer.cs">
+      <DependentUpon>Join.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Places\WorldMapCache.ascx.cs">
+      <DependentUpon>WorldMapCache.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Places\WorldMapCache.ascx.designer.cs">
+      <DependentUpon>WorldMapCache.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\WebFormError.aspx.cs">
+      <DependentUpon>WebFormError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\WebFormError.aspx.designer.cs">
+      <DependentUpon>WebFormError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\Feedback.aspx.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\Feedback.aspx.designer.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\ForgottenPassword.aspx.cs">
+      <DependentUpon>ForgottenPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\ForgottenPassword.aspx.designer.cs">
+      <DependentUpon>ForgottenPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\ThankYou.aspx.cs">
+      <DependentUpon>ThankYou.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\ThankYou.aspx.designer.cs">
+      <DependentUpon>ThankYou.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\ThrowExceptionTwo.aspx.cs">
+      <DependentUpon>ThrowExceptionTwo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\ThrowExceptionTwo.aspx.designer.cs">
+      <DependentUpon>ThrowExceptionTwo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Moderate\AddOutdoorLocation.aspx.cs">
+      <DependentUpon>AddOutdoorLocation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Moderate\AddOutdoorLocation.aspx.designer.cs">
+      <DependentUpon>AddOutdoorLocation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Moderate\EditOutdoorLocation.aspx.cs">
+      <DependentUpon>EditOutdoorLocation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Moderate\EditOutdoorLocation.aspx.designer.cs">
+      <DependentUpon>EditOutdoorLocation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Media\EditOutdoorLocationPictures.aspx.cs">
+      <DependentUpon>EditOutdoorLocationPictures.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Media\EditOutdoorLocationPictures.aspx.designer.cs">
+      <DependentUpon>EditOutdoorLocationPictures.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Moderate\UnauthorizedAccess.aspx.cs">
+      <DependentUpon>UnauthorizedAccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Moderate\UnauthorizedAccess.aspx.designer.cs">
+      <DependentUpon>UnauthorizedAccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Moderate\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Moderate\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\News\2008-11-Climbfind-Roadtrip.aspx.cs">
+      <DependentUpon>2008-11-Climbfind-Roadtrip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\News\2008-11-Climbfind-Roadtrip.aspx.designer.cs">
+      <DependentUpon>2008-11-Climbfind-Roadtrip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\News\2008-CompetitionTemplate.aspx.cs">
+      <DependentUpon>2008-CompetitionTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\News\2008-CompetitionTemplate.aspx.designer.cs">
+      <DependentUpon>2008-CompetitionTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\News\Competitions.aspx.cs">
+      <DependentUpon>Competitions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\News\Competitions.aspx.designer.cs">
+      <DependentUpon>Competitions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\News\2008-FeatureArticle.aspx.cs">
+      <DependentUpon>2008-FeatureArticle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\News\2008-FeatureArticle.aspx.designer.cs">
+      <DependentUpon>2008-FeatureArticle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\News\FeatureArticleBuilder.aspx.cs">
+      <DependentUpon>FeatureArticleBuilder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\News\FeatureArticleBuilder.aspx.designer.cs">
+      <DependentUpon>FeatureArticleBuilder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\IndexNewsFeed.ascx.cs">
+      <DependentUpon>IndexNewsFeed.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\IndexNewsFeed.ascx.designer.cs">
+      <DependentUpon>IndexNewsFeed.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\News\MainFeed.aspx.cs">
+      <DependentUpon>MainFeed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\News\MainFeed.aspx.designer.cs">
+      <DependentUpon>MainFeed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\News\FeatureArticles.aspx.cs">
+      <DependentUpon>FeatureArticles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\News\FeatureArticles.aspx.designer.cs">
+      <DependentUpon>FeatureArticles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\News\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\News\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PartnerCalls\New.aspx.cs">
+      <DependentUpon>New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\PartnerCalls\New.aspx.designer.cs">
+      <DependentUpon>New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PartnerCalls\Reply.aspx.cs">
+      <DependentUpon>Reply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\PartnerCalls\Reply.aspx.designer.cs">
+      <DependentUpon>Reply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PartnerCalls\ShowReply.aspx.cs">
+      <DependentUpon>ShowReply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\PartnerCalls\ShowReply.aspx.designer.cs">
+      <DependentUpon>ShowReply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Places\IndexCache.ascx.cs">
+      <DependentUpon>IndexCache.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Places\IndexCache.ascx.designer.cs">
+      <DependentUpon>IndexCache.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Places\OtherPlaceRegularsCloud.ascx.cs">
+      <DependentUpon>OtherPlaceRegularsCloud.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Places\OtherPlaceRegularsCloud.ascx.designer.cs">
+      <DependentUpon>OtherPlaceRegularsCloud.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Places\Regulars.aspx.cs">
+      <DependentUpon>Regulars.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Places\Regulars.aspx.designer.cs">
+      <DependentUpon>Regulars.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Places\DetailOutdoor.aspx.cs">
+      <DependentUpon>DetailOutdoor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Places\DetailOutdoor.aspx.designer.cs">
+      <DependentUpon>DetailOutdoor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Places\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Places\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Places\OtherAreasInCountryCloud.ascx.cs">
+      <DependentUpon>OtherAreasInCountryCloud.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Places\OtherAreasInCountryCloud.ascx.designer.cs">
+      <DependentUpon>OtherAreasInCountryCloud.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Places\PeopleClimbingAtPlaceList.ascx.cs">
+      <DependentUpon>PeopleClimbingAtPlaceList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Places\PeopleClimbingAtPlaceList.ascx.designer.cs">
+      <DependentUpon>PeopleClimbingAtPlaceList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Media\MediaList.ascx.cs">
+      <DependentUpon>MediaList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Media\MediaList.ascx.designer.cs">
+      <DependentUpon>MediaList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\EmptyControl.ascx.cs">
+      <DependentUpon>EmptyControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\EmptyControl.ascx.designer.cs">
+      <DependentUpon>EmptyControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\UrlGone.aspx.cs">
+      <DependentUpon>UrlGone.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\UrlGone.aspx.designer.cs">
+      <DependentUpon>UrlGone.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\UrlGonePageBody.ascx.cs">
+      <DependentUpon>UrlGonePageBody.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\UrlGonePageBody.ascx.designer.cs">
+      <DependentUpon>UrlGonePageBody.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\AddThisBookmark.ascx.cs">
+      <DependentUpon>AddThisBookmark.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\AddThisBookmark.ascx.designer.cs">
+      <DependentUpon>AddThisBookmark.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\CF.Master.cs">
+      <DependentUpon>CF.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\CF.Master.designer.cs">
+      <DependentUpon>CF.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Head.ascx.cs">
+      <DependentUpon>Head.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Head.ascx.designer.cs">
+      <DependentUpon>Head.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\ViewStateFriendly.Master.cs">
+      <DependentUpon>ViewStateFriendly.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\ViewStateFriendly.Master.designer.cs">
+      <DependentUpon>ViewStateFriendly.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\PageNotFound.aspx.cs">
+      <DependentUpon>PageNotFound.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\PageNotFound.aspx.designer.cs">
+      <DependentUpon>PageNotFound.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Footer.ascx.designer.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\FullSizeImage.aspx.cs">
+      <DependentUpon>FullSizeImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\FullSizeImage.aspx.designer.cs">
+      <DependentUpon>FullSizeImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shared\Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Shared\Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="410UrlGone.html" />
+    <Content Include="apple-touch-icon-114x114-precomposed.png" />
+    <Content Include="apple-touch-icon-114x114.png" />
+    <Content Include="apple-touch-icon-precomposed.png" />
+    <Content Include="apple-touch-icon.png" />
+    <Content Include="Blogfiles\2008\07\02-about-climbfind-and-why-its-not.html" />
+    <Content Include="Blogfiles\2008\08\perfectionism-downfall-of-entrepreneur.html" />
+    <Content Include="Blogfiles\2008\09\04-trimming-fat-aka-going-live-without.html" />
+    <Content Include="Blogfiles\2008\09\05-marketing-starts-with-realistic.html" />
+    <Content Include="Blogfiles\2008\10\06-how-to-find-and-consume-new-ideas.html" />
+    <Content Include="Blogfiles\2008\10\07-climbfind-goes-live-and-why-you-have.html" />
+    <Content Include="Blogfiles\2008\10\08-quick-analysis-of-climbfinds-launch.html" />
+    <Content Include="Blogfiles\2008\10\09-sometimes-you-just-have-to-take.html" />
+    <Content Include="Blogfiles\2008\11\10-im-back-ready-for-big-week-some-new.html" />
+    <Content Include="Blogfiles\2008\11\110-cf-marketing-strategies-part-0.html" />
+    <Content Include="Blogfiles\2008\11\111-climbfind-marketing-strategies-part.html" />
+    <Content Include="Blogfiles\2008\11\12-fire-is-about-to-spread-through-uk.html" />
+    <Content Include="Blogfiles\2008\11\13-quick-summary-on-last-crazy-week.html" />
+    <Content Include="Blogfiles\2008\12\14-why-i-didnt-get-on-my-flight-to.html" />
+    <Content Include="Blogfiles\2008_08_01_archive.html" />
+    <Content Include="Blogfiles\2008_09_01_archive.html" />
+    <Content Include="Blogfiles\2008_10_01_archive.html" />
+    <Content Include="Blogfiles\2008_11_01_archive.html" />
+    <Content Include="Blogfiles\2008_12_01_archive.html" />
+    <Content Include="Blogfiles\2009\02\why-climbfind-had-15000-visitors-in-15.html" />
+    <Content Include="Blogfiles\2009\04\17-ten-things-you-should-not-do-when.html" />
+    <Content Include="Blogfiles\2009\05\episode-1-of-our-video-blog.html" />
+    <Content Include="Blogfiles\2009\05\first-of-many-indoor-climbing-gym-tours.html" />
+    <Content Include="Blogfiles\2009\05\testing-labels.html" />
+    <Content Include="Blogfiles\2009\05\were-booked.html" />
+    <Content Include="Blogfiles\2009\05\what-climbfind-does.html" />
+    <Content Include="Blogfiles\2009\05\what-to-expect-from-our-blog.html" />
+    <Content Include="Blogfiles\2009\05\why-this-roadtrip-what-you-can-expect.html" />
+    <Content Include="Blogfiles\2009\06\4-days-in-oregon-usa.html" />
+    <Content Include="Blogfiles\2009\06\episode-2-of-our-video-blog-car-hunting.html" />
+    <Content Include="Blogfiles\2009\06\exploring-squamish-cheif-bouldering.html" />
+    <Content Include="Blogfiles\2009\06\indoor-climbing-around-seattle.html" />
+    <Content Include="Blogfiles\2009\07\indoor-climbing-around-san-fransico-bay.html" />
+    <Content Include="Blogfiles\2009_02_01_archive.html" />
+    <Content Include="Blogfiles\2009_04_01_archive.html" />
+    <Content Include="Blogfiles\2009_05_01_archive.html" />
+    <Content Include="Blogfiles\2009_06_01_archive.html" />
+    <Content Include="Blogfiles\2009_07_01_archive.html" />
+    <Content Include="Blogfiles\atom.xml" />
+    <Content Include="Blogfiles\Blog.html" />
+    <Content Include="Blogfiles\labels\Climbfind mission.html" />
+    <Content Include="Blogfiles\labels\Climbfind website.html" />
+    <Content Include="Blogfiles\labels\Debauchery.html" />
+    <Content Include="Blogfiles\labels\Help promote Climbfind.html" />
+    <Content Include="Blogfiles\rss.xml" />
+    <Content Include="css\cf3.53.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="VAM\3_0_8\VAM.js" />
+    <Content Include="VAM\3_0_8\VAM_AJAX.js" />
+    <Content Include="VAM\3_0_8\VAM_Blink.js" />
+    <Content Include="VAM\3_0_8\VAM_Calc.js" />
+    <Content Include="VAM\3_0_8\VAM_CallBack.js" />
+    <Content Include="VAM\3_0_8\VAM_DTTB.js" />
+    <Content Include="VAM\3_0_8\VAM_FSC.js" />
+    <Content Include="VAM\3_0_8\VAM_Hint.js" />
+    <Content Include="VAM\3_0_8\VAM_MSDE.js" />
+    <Content Include="VAM\3_0_8\VAM_Spin.js" />
+    <Content Include="VAM\3_0_8\VAM_SV.js" />
+    <Content Include="VAM\3_0_8\VAM_XVF.js" />
+    <Content Include="VAM\Appearance\CalcDesignMode.bmp" />
+    <Content Include="VAM\Appearance\DnArrow1.GIF" />
+    <Content Include="VAM\Appearance\DnArrow1Pressed.GIF" />
+    <Content Include="VAM\Appearance\FSADesignMode.bmp" />
+    <Content Include="VAM\Appearance\FSADesignMode2.bmp" />
+    <Content Include="VAM\Appearance\RequiredDot.GIF" />
+    <Content Include="VAM\Appearance\spacer.gif" />
+    <Content Include="VAM\Appearance\UpArrow1.GIF" />
+    <Content Include="VAM\Appearance\UpArrow1Pressed.GIF" />
+    <Content Include="VAM\Appearance\valerroricon.GIF" />
+    <Content Include="VAM\Appearance\valerroricon_animated.GIF" />
+    <Content Include="VAM\Appearance\validicon.GIF" />
+    <Content Include="VAM\Appearance\VAMStyleSheet.css" />
+    <Content Include="VAM\Custom.VAM.Config" />
+    <Content Include="VAM\Licenses\Client Side Toolkit\Add Client Side Toolkit Licenses here.txt" />
+    <Content Include="VAM\Licenses\Data Entry Controls\Add Data Entry Control Licenses here.txt" />
+    <Content Include="VAM\Licenses\Essential Validators\Add Essential Validator Licenses here.txt" />
+    <Content Include="VAM\Licenses\Security\Add Visual Input Security License here.txt" />
+    <Content Include="VAM\Licenses\Special Validators\Add Special Validators Licenses here.txt" />
+    <Content Include="VAM\VAM.config" />
+    <Content Include="VAM\VISE Config Files\custom.config" />
+    <Content Include="VAM\VISE Config Files\IP.config" />
+    <Content Include="VAM\VISE Config Files\master.config" />
+    <Content Include="VAM\VISE Config Files\msaccess.config" />
+    <Content Include="VAM\VISE Config Files\mssqlserver.config" />
+    <Content Include="VAM\VISE Config Files\mysql.config" />
+    <Content Include="VAM\VISE Config Files\oracle.config" />
+    <Content Include="Views\Admin\DeleteCachedDiskImages.aspx" />
+    <Content Include="Views\Blog\Industry.aspx" />
+    <Content Include="Views\Home\CF4.aspx" />
+    <Content Include="Views\Home\PGIndex.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Shared\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\AdUnits\Google160x600.ascx" />
+    <Content Include="Controls\LoginOrRegister.ascx" />
+    <Content Include="Controls\Validators\Email.ascx" />
+    <Content Include="Controls\Validators\Password.ascx" />
+    <Content Include="Views\Home\Login.aspx" />
+    <Content Include="Views\Home\ThankYou.aspx" />
+    <Content Include="Views\Shared\CF.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Browsers\membership.browser" />
+    <Content Include="Controls\ClimbFindProfileFull.ascx" />
+    <Content Include="Controls\Validators\FullName.ascx" />
+    <Content Include="Controls\Validators\GroupName.ascx" />
+    <Content Include="Controls\Validators\Length.ascx" />
+    <Content Include="Controls\Validators\Message.ascx" />
+    <Content Include="Views\ClimberProfiles\Detail.aspx" />
+    <Content Include="Views\ClimberProfiles\DetailShort.ascx" />
+    <Content Include="Views\ClimberProfiles\EditPicture.aspx" />
+    <Content Include="Views\ClimberProfiles\Me.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\Content\AboutGroups.ascx" />
+    <Content Include="Controls\Content\AboutRollCalls.ascx" />
+    <Content Include="Controls\MessageBoard.ascx" />
+    <Content Include="js\CF3.52.js" />
+    <Content Include="Views\Admin\LogList.aspx" />
+    <Content Include="Views\Places\Index.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\cf3.52.css" />
+    <Content Include="Views\Admin\Admin.Master" />
+    <Content Include="Views\Admin\Feedback.aspx" />
+    <Content Include="Views\Home\Feedback.aspx" />
+    <Content Include="Views\PartnerCalls\New.aspx" />
+    <Content Include="Views\PartnerCalls\Reply.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Thumb.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Climbfind.Services\Climbfind.Services.csproj">
+      <Project>{AE6846C2-603C-4214-B48C-09C881D72707}</Project>
+      <Name>Climbfind.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClimbFind\ClimbFind.csproj">
+      <Project>{924DD83D-FC72-4183-B08F-74260A515273}</Project>
+      <Name>ClimbFind</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Browsers\dropdownlist.browser" />
+    <Content Include="css\reset-fonts.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="robots.txt" />
+    <Content Include="Views\Admin\PlaceList.aspx" />
+    <Content Include="Views\Admin\ExceptionsList.aspx" />
+    <Content Include="Views\Admin\MessageBoardPosts.aspx" />
+    <Content Include="Views\Admin\UsersList.aspx" />
+    <Content Include="Views\ClimberProfiles\Edit.aspx" />
+    <Content Include="Views\ClimberProfiles\WriteMessage.aspx" />
+    <Content Include="Views\Home\GradeConverter.aspx" />
+    <Content Include="Views\Home\Glossary.aspx" />
+    <Content Include="Views\Home\ChangePassword.aspx" />
+    <Content Include="Views\Home\Join.aspx" />
+    <Content Include="Views\Home\WebFormError.aspx" />
+    <Content Include="Views\Home\ForgottenPassword.aspx" />
+    <Content Include="Views\Home\ThrowExceptionTwo.aspx" />
+    <Content Include="Views\PartnerCalls\ShowReply.aspx" />
+    <Content Include="Views\Places\OtherPlaceRegularsCloud.ascx" />
+    <Content Include="Views\Places\Regulars.aspx" />
+    <Content Include="Views\Places\DetailOutdoor.aspx" />
+    <Content Include="Views\Places\OtherAreasInCountryCloud.ascx" />
+    <Content Include="Views\Places\PeopleClimbingAtPlaceList.ascx" />
+    <Content Include="Views\Media\MediaList.ascx" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\Footer.ascx" />
+    <Content Include="Views\Shared\FullSizeImage.aspx" />
+    <Content Include="Views\Shared\Header.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\AdUnits\ClimbfindAds.ascx" />
+    <Content Include="Controls\StarRating.ascx" />
+    <Content Include="js\jquery.galleriffic.js" />
+    <Content Include="js\white.css" />
+    <Content Include="Views\Admin\ClubsList.aspx" />
+    <Content Include="Views\Admin\GenerateSiteMap.aspx" />
+    <Content Include="Views\Admin\GuidGenerator.aspx" />
+    <Content Include="Views\Ads\Purchase.aspx" />
+    <Content Include="Views\Ads\Index.aspx" />
+    <Content Include="Views\ClimberProfiles\ProfileLinkWithPictureList.ascx" />
+    <Content Include="Views\ClimberProfiles\ClubsIBelongTo.ascx" />
+    <Content Include="Views\Clubs\Detail.aspx" />
+    <Content Include="Views\Clubs\Index.aspx" />
+    <Content Include="Views\Clubs\New.aspx" />
+    <Content Include="Views\Home\Contribute.aspx" />
+    <Content Include="Views\Home\Promote.aspx" />
+    <Content Include="Views\Home\Friends.aspx" />
+    <Content Include="Views\Home\Inbox.aspx" />
+    <Content Include="Views\Media\AddCragYouTube.aspx" />
+    <Content Include="Views\Media\Detail.aspx" />
+    <Content Include="Views\Media\Index.aspx" />
+    <Content Include="Views\Moderate\AddIndoorPlace.aspx" />
+    <Content Include="Views\Media\AddPlaceYouTube.aspx" />
+    <Content Include="Views\Moderate\AddOutdoorCrag.aspx" />
+    <Content Include="Views\Media\EditOutdoorCragPictures.aspx" />
+    <Content Include="Views\Moderate\AddAreaTag.aspx" />
+    <Content Include="Views\Moderate\AreaTagList.aspx" />
+    <Content Include="Views\Moderate\EditAreaTag.aspx" />
+    <Content Include="Views\Moderate\EditOutdoorCrag.aspx" />
+    <Content Include="Views\Moderate\EditPlaceAreaTags.aspx" />
+    <Content Include="Views\Moderate\EditClub.aspx" />
+    <Content Include="Views\Moderate\EditClubLogo.aspx" />
+    <Content Include="Views\Moderate\EditPlaceMedia.aspx" />
+    <Content Include="Views\Moderate\OutdoorPlaceList.aspx" />
+    <Content Include="Views\Moderate\EditIndoorPlaceLogo.aspx" />
+    <Content Include="Views\Moderate\EditIndoorPlace.aspx" />
+    <Content Include="Views\Moderate\IndoorPlaceList.aspx" />
+    <Content Include="Views\Places\AreaPage.aspx" />
+    <Content Include="Views\Places\CragsList.ascx" />
+    <Content Include="Views\Places\DetailCrag.aspx" />
+    <Content Include="Views\ClimberProfiles\ConfirmDeleteMe.aspx" />
+    <Content Include="Views\ClimberProfiles\EditOutdoorPlaces.aspx" />
+    <Content Include="Views\ClimberProfiles\EditPartnerStatus.aspx" />
+    <Content Include="Views\ClimberProfiles\EditExtendedProfile.aspx" />
+    <Content Include="Views\ClimberProfiles\ExtendedProfile.ascx" />
+    <Content Include="Views\ClimberProfiles\PlacesIClimb.ascx" />
+    <Content Include="Views\ClimberProfiles\Search.aspx" />
+    <Content Include="Views\ClimberProfiles\EditIndoorPlaces.aspx" />
+    <Content Include="Views\ClimberProfiles\EditFirstTime.aspx" />
+    <Content Include="Views\ClimberProfiles\RegularsShortlist.ascx" />
+    <Content Include="Views\Home\Find.aspx" />
+    <Content Include="Views\Moderate\AddOutdoorLocation.aspx" />
+    <Content Include="Views\Moderate\EditOutdoorLocation.aspx" />
+    <Content Include="Views\Media\EditOutdoorLocationPictures.aspx" />
+    <Content Include="Views\Moderate\UnauthorizedAccess.aspx" />
+    <Content Include="Views\Moderate\Index.aspx" />
+    <Content Include="Views\News\2008-11-Climbfind-Roadtrip.aspx" />
+    <Content Include="Views\News\2008-CompetitionTemplate.aspx" />
+    <Content Include="Views\News\Competitions.aspx" />
+    <Content Include="Views\News\2008-FeatureArticle.aspx" />
+    <Content Include="Views\News\FeatureArticleBuilder.aspx" />
+    <Content Include="Views\Home\IndexNewsFeed.ascx" />
+    <Content Include="Views\News\MainFeed.aspx" />
+    <Content Include="Views\News\FeatureArticles.aspx" />
+    <Content Include="Views\News\Index.aspx" />
+    <Content Include="Views\Places\IndexCache.ascx" />
+    <Content Include="Views\Shared\AddThisBookmark.ascx" />
+    <Content Include="Views\Shared\PageNotFound.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\AdUnits\AmazonProductLink.ascx" />
+    <Content Include="Views\Home\About.aspx" />
+    <Content Include="Views\Home\AboutPartnerWidget.aspx" />
+    <Content Include="Views\Home\Search.aspx" />
+    <Content Include="Views\PartnerCalls\ByPlace.aspx" />
+    <Content Include="Views\PartnerCalls\ByPlaceCache.ascx" />
+    <Content Include="Views\PartnerCalls\List.aspx" />
+    <Content Include="Views\Places\WorldMap.aspx" />
+    <Content Include="Views\Places\Outdoor.aspx" />
+    <Content Include="Views\Places\PartnerWidget.aspx" />
+    <Content Include="Views\Shared\ViewStateFriendly.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\AdUnits\CF3Homepage160x600Banner.ascx" />
+    <Content Include="Controls\AdUnits\AreaMapRight160x600.ascx" />
+    <Content Include="Controls\AdUnits\IndoorPlaceDetailsRight160x600.ascx" />
+    <Content Include="Controls\AdUnits\InputFormRight160x600.ascx" />
+    <Content Include="Controls\AdUnits\ProfileAds.ascx" />
+    <Content Include="Controls\MapCoordinatePicker.ascx" />
+    <Content Include="Controls\PlacePickerGoTo.ascx" />
+    <Content Include="Controls\PaypalDonateButton.ascx" />
+    <Content Include="Controls\PlacePicker.ascx" />
+    <Content Include="Controls\TextBoxCharacterCounter.ascx" />
+    <Content Include="Controls\TextBox\AreaPicker.ascx" />
+    <Content Include="Controls\Validators\PlaceName.ascx" />
+    <Content Include="js\CF3.52Home.js" />
+    <Content Include="js\jquery-1.3.1.min.js" />
+    <Content Include="js\jquery.ajaxQueue.js" />
+    <Content Include="js\jquery.autocomplete.min.js" />
+    <Content Include="js\jquery.boxy.js" />
+    <Content Include="js\ui.datepicker.js" />
+    <Content Include="Views\Admin\GenerateUrlGonePage.aspx" />
+    <Content Include="Views\Ads\Report.aspx" />
+    <Content Include="Views\Blog\RSSTransformHelper.xslt" />
+    <Content Include="Views\CFFeed\AboutFeedTags.aspx" />
+    <Content Include="Views\CFFeed\ClimbersImWatching.aspx" />
+    <Content Include="Views\CFFeed\CommentOnPost.aspx" />
+    <Content Include="Views\CFFeed\ClimbersWatchingMe.aspx" />
+    <Content Include="Views\CFFeed\FeedItemList.ascx" />
+    <Content Include="Views\CFFeed\FirstPost.aspx" />
+    <Content Include="Views\CFFeed\PublicFeed.ascx" />
+    <Content Include="Views\CFFeed\FindClimbersForWatchList.aspx" />
+    <Content Include="Views\CFFeed\Feed.ascx" />
+    <Content Include="Views\CFFeed\NewPost.aspx" />
+    <Content Include="Views\CFFeed\NewPostPlace.aspx" />
+    <Content Include="Views\Blog\BlogTemplate.htm" />
+    <Content Include="Views\Blog\Index.aspx" />
+    <Content Include="Views\ClimberProfiles\All.aspx" />
+    <Content Include="Views\ClimberProfiles\AllCache.ascx" />
+    <Content Include="Controls\SubscribeToPartnerCallsWhereIClimb.ascx" />
+    <Content Include="Views\ClimberProfiles\AllWhatILike.aspx" />
+    <Content Include="Views\ClimberProfiles\Bloggers.aspx" />
+    <Content Include="Views\ClimberProfiles\Moderators.aspx" />
+    <Content Include="Views\ClimberProfiles\VerifyEmailAddress.aspx" />
+    <Content Include="Views\ClimberProfiles\MyMediaList.ascx" />
+    <Content Include="Views\Home\AboutProfileExample.aspx" />
+    <Content Include="Views\Home\CF3BetaBrief.aspx" />
+    <Content Include="Views\Home\CFMail.aspx" />
+    <Content Include="Views\Home\ClimbingTypes.aspx" />
+    <Content Include="Views\Home\Help.aspx" />
+    <Content Include="Views\Home\IndexBlogFeed.ascx" />
+    <Content Include="Views\Home\HomepageSettings.aspx" />
+    <Content Include="Views\Home\IndexAuthenticated.aspx" />
+    <Content Include="Views\Home\IndexSiteAffiliates.ascx" />
+    <Content Include="Views\Home\IndexMovieFeed.ascx" />
+    <Content Include="Views\Home\ForIndoorClimbingBusinesses.aspx" />
+    <Content Include="Views\CFFeed\PlaceGoingClimbingTxB.ascx" />
+    <Content Include="Views\Home\IndexToDo.ascx" />
+    <Content Include="Views\PartnerCalls\Notifications.aspx" />
+    <Content Include="Views\Home\Sent.aspx" />
+    <Content Include="Views\Media\SubmitMovie.aspx" />
+    <Content Include="Views\Media\UsersMedia.aspx" />
+    <Content Include="Views\Moderate\AreaTagForCountryTxB.ascx" />
+    <Content Include="Views\Moderate\EditPlaceMap.aspx" />
+    <Content Include="Views\Moderate\OutdoorCragList.aspx" />
+    <Content Include="Views\Moderate\EditOutdoorAuthoritySites.aspx" />
+    <Content Include="Views\Moderate\PlaceChecker.ascx" />
+    <Content Include="Views\PartnerCalls\PartnerCustomWidget.aspx" />
+    <Content Include="Views\PartnerCalls\PartnerAreaWidget.aspx" />
+    <Content Include="Views\Places\PartnerWidget2.aspx" />
+    <Content Include="Views\Places\IndoorMapCache.ascx" />
+    <Content Include="Views\Places\Indoor.aspx" />
+    <Content Include="Views\Places\OutdoorMapCache.ascx" />
+    <Content Include="Views\Places\FilterAreaSearch.aspx" />
+    <Content Include="Views\Places\FilterGoTo.aspx" />
+    <Content Include="Views\PartnerCalls\About.aspx" />
+    <Content Include="Views\PartnerCalls\ConfirmDelete.aspx" />
+    <Content Include="Views\PartnerCalls\Subscribe.aspx" />
+    <Content Include="Views\Places\DetailIndoor.aspx" />
+    <Content Include="Views\Places\FilterSearch.aspx" />
+    <Content Include="Views\Places\SeekingPartnersRSS.aspx" />
+    <Content Include="Views\Places\SeekingPartners.aspx" />
+    <Content Include="Views\Places\DetailPlaceRegularsSampleCache.ascx" />
+    <Content Include="Views\Places\WorldMapCache.ascx" />
+    <Content Include="Views\Shared\EmptyControl.ascx" />
+    <Content Include="Views\Shared\UrlGone.aspx" />
+    <Content Include="Views\Shared\UrlGonePageBody.ascx" />
+    <Content Include="Views\Shared\Head.ascx" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="VAM\Custom.VAM.Config.bku" />
+    <None Include="VAM\Licenses\VAM Suite Development.lic" />
+    <None Include="VAM\Licenses\VAM Suite SingleServer28041.lic" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>1047</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

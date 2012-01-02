@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClimbFind", "ClimbFind\ClimbFind.csproj", "{924DD83D-FC72-4183-B08F-74260A515273}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Climbfind.Services", "Climbfind.Services\Climbfind.Services.csproj", "{AE6846C2-603C-4214-B48C-09C881D72707}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Climbfind.Web", "IdentityStuff\Climbfind.Web.csproj", "{B71EDE6E-6A77-49B2-960C-5EF74B4C1680}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Release|.NET = Release|.NET
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{924DD83D-FC72-4183-B08F-74260A515273}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{924DD83D-FC72-4183-B08F-74260A515273}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{924DD83D-FC72-4183-B08F-74260A515273}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{924DD83D-FC72-4183-B08F-74260A515273}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{924DD83D-FC72-4183-B08F-74260A515273}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{924DD83D-FC72-4183-B08F-74260A515273}.Release|.NET.ActiveCfg = Release|Any CPU
+		{924DD83D-FC72-4183-B08F-74260A515273}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{924DD83D-FC72-4183-B08F-74260A515273}.Release|Any CPU.Build.0 = Release|Any CPU
+		{924DD83D-FC72-4183-B08F-74260A515273}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{924DD83D-FC72-4183-B08F-74260A515273}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{AE6846C2-603C-4214-B48C-09C881D72707}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{AE6846C2-603C-4214-B48C-09C881D72707}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE6846C2-603C-4214-B48C-09C881D72707}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE6846C2-603C-4214-B48C-09C881D72707}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{AE6846C2-603C-4214-B48C-09C881D72707}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{AE6846C2-603C-4214-B48C-09C881D72707}.Release|.NET.ActiveCfg = Release|Any CPU
+		{AE6846C2-603C-4214-B48C-09C881D72707}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE6846C2-603C-4214-B48C-09C881D72707}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE6846C2-603C-4214-B48C-09C881D72707}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{AE6846C2-603C-4214-B48C-09C881D72707}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{B71EDE6E-6A77-49B2-960C-5EF74B4C1680}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{B71EDE6E-6A77-49B2-960C-5EF74B4C1680}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B71EDE6E-6A77-49B2-960C-5EF74B4C1680}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B71EDE6E-6A77-49B2-960C-5EF74B4C1680}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B71EDE6E-6A77-49B2-960C-5EF74B4C1680}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B71EDE6E-6A77-49B2-960C-5EF74B4C1680}.Release|.NET.ActiveCfg = Release|Any CPU
+		{B71EDE6E-6A77-49B2-960C-5EF74B4C1680}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B71EDE6E-6A77-49B2-960C-5EF74B4C1680}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B71EDE6E-6A77-49B2-960C-5EF74B4C1680}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{B71EDE6E-6A77-49B2-960C-5EF74B4C1680}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

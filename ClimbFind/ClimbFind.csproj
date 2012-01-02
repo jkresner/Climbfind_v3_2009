@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{924DD83D-FC72-4183-B08F-74260A515273}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClimbFind</RootNamespace>
+    <AssemblyName>ClimbFind</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PeterBlum.VAM, Version=3.0.8.5000, Culture=neutral, PublicKeyToken=76d6c019e89ec3c9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ClimbFindWebApp\bin\PeterBlum.VAM.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Entity">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CFSettings.cs" />
+    <Compile Include="Content\CFImageInfo.cs" />
+    <Compile Include="Content\CFUrlGenerator.cs" />
+    <Compile Include="Content\ImageManager..cs" />
+    <Compile Include="Content\ImageManager.Contoller..cs" />
+    <Compile Include="Content\ImageResizer.cs" />
+    <Compile Include="Exceptions\UserPartnerCallWithSamePlacesExistsException.cs" />
+    <Compile Include="Exceptions\UserEmailVerificationFailedException.cs" />
+    <Compile Include="Exceptions\Helper.cs" />
+    <Compile Include="Exceptions\UserAlreadyBelongsToGroupException.cs" />
+    <Compile Include="Content\FlagList.cs" />
+    <Compile Include="Helpers\CFExtensions.cs" />
+    <Compile Include="Exceptions\410UrlsGone.cs" />
+    <Compile Include="Model\DataAccess\CFDataCache.cs" />
+    <Compile Include="Model\DataAccess\CFProfile.cs" />
+    <Compile Include="Model\DataAccess\ClimberProfileDA.cs" />
+    <Compile Include="Model\DataAccess\CompetitionDA.cs" />
+    <Compile Include="Model\DataAccess\ClimberProfileExtendedDA.cs" />
+    <Compile Include="Model\DataAccess\ClimberProfilePartnerStatusDA.cs" />
+    <Compile Include="Model\DataAccess\ClubDA.cs" />
+    <Compile Include="Model\DataAccess\AdClickDA.cs" />
+    <Compile Include="Model\DataAccess\AdDA.cs" />
+    <Compile Include="Model\DataAccess\AdClientDA.cs" />
+    <Compile Include="Model\DataAccess\AdProductDA.cs" />
+    <Compile Include="Model\DataAccess\FeedClimberChannelRequestDA.cs" />
+    <Compile Include="Model\DataAccess\FeedTagDA.cs" />
+    <Compile Include="Model\DataAccess\FeedPostCommentDA.cs" />
+    <Compile Include="Model\DataAccess\FeedViewSettingsDA.cs" />
+    <Compile Include="Model\DataAccess\FeedClimbingPostDA.cs" />
+    <Compile Include="Model\DataAccess\PartnerCallSubscriptionsDA.cs" />
+    <Compile Include="Model\DataAccess\PartnerWidgetCSSDA.cs" />
+    <Compile Include="Model\DataAccess\PlaceOutdoorCragDA.cs" />
+    <Compile Include="Model\DataAccess\MainNewsFeedItemDA.cs" />
+    <Compile Include="Model\DataAccess\SpecialPagesHTMLDA.cs" />
+    <Compile Include="Model\DataAccess\PhotoSetDA.cs" />
+    <Compile Include="Model\DataAccess\FeatureArticleDA.cs" />
+    <Compile Include="Model\DataAccess\UserMessageDA.cs" />
+    <Compile Include="Model\DataAccess\MediaShareDA.cs" />
+    <Compile Include="Model\DataAccess\AreaTagDA.cs" />
+    <Compile Include="Model\DataAccess\IndoorPlaceDA.cs" />
+    <Compile Include="Model\DataAccess\OutdoorPlaceDA.cs" />
+    <Compile Include="Model\DataAccess\FeedbackDA.cs" />
+    <Compile Include="Model\DataAccess\LogEventDA.cs" />
+    <Compile Include="Model\DataAccess\LogExceptionEventDA.cs" />
+    <Compile Include="Model\DataAccess\MessageBoardMessageDA.cs" />
+    <Compile Include="Model\DataAccess\PartnerCallReplyDA.cs" />
+    <Compile Include="Model\DataAccess\MessageBoardDA.cs" />
+    <Compile Include="Model\DataAccess\UserSettingsDA.cs" />
+    <Compile Include="Model\DataAccess\PartnerCallDA.cs" />
+    <Compile Include="Model\DataAccess\PlaceDA.cs" />
+    <Compile Include="Model\DataAccess\_AbstractBaseDA.cs" />
+    <Compile Include="Model\DataAccess\_IDATransactionContext.cs" />
+    <Compile Include="Model\DataAccess\_IObjectOrientatedDA.cs" />
+    <Compile Include="Model\Enum\FeedPostPrivacy.cs" />
+    <Compile Include="Model\Enum\FeedView.cs" />
+    <Compile Include="Model\Enum\FeedChannel.cs" />
+    <Compile Include="Model\Enum\FeedPostType.cs" />
+    <Compile Include="Model\Enum\PartnerCallDisplayMode.cs" />
+    <Compile Include="Model\Enum\PartnerCallPlaceType.cs" />
+    <Compile Include="Model\Enum\HomePartnerCallCountries.cs" />
+    <Compile Include="Model\Enum\CragTypes.cs" />
+    <Compile Include="Model\Enum\MediaType.cs" />
+    <Compile Include="Model\Enum\EmailType.cs" />
+    <Compile Include="Model\Enum\CFLogEventType.cs" />
+    <Compile Include="Model\Enum\PlaceType.cs" />
+    <Compile Include="Model\Enum\ImageType.cs" />
+    <Compile Include="Model\Enum\Nation.cs" />
+    <Compile Include="Model\Enum\RSVPStatus.cs" />
+    <Compile Include="Model\LinqToSqlMapping\CFFeedLinqModel.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CFFeedLinqModel.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\LinqToSqlMapping\ClimbfindLinqModel.designer.cs">
+      <DependentUpon>ClimbfindLinqModel.dbml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Model\LinqToSqlMapping\ClimbfindLinqModel.Extensions.cs" />
+    <Compile Include="Model\LinqToSqlMapping\CFFeedLinqModel.Extensions.cs" />
+    <Compile Include="Model\LinqToSqlMapping\SiteAdsLinqModel.Extensions.cs" />
+    <Compile Include="Model\LinqToSqlMapping\SiteAdsLinqModel.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SiteAdsLinqModel.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Objects\Competition.cs" />
+    <Compile Include="Model\Objects\ClimberProfileExtended.cs" />
+    <Compile Include="Model\Objects\ClimberProfilePartnerStatus.cs" />
+    <Compile Include="Model\Objects\Club.cs" />
+    <Compile Include="Model\Objects\AdClick.cs" />
+    <Compile Include="Model\Objects\Ad.cs" />
+    <Compile Include="Model\Objects\AdClient.cs" />
+    <Compile Include="Model\Objects\AdProduct.cs" />
+    <Compile Include="Model\Objects\FeedPartnerCallPost.cs" />
+    <Compile Include="Model\Objects\FeedWatchedClimber.cs" />
+    <Compile Include="Model\Objects\FeedMoviePost.cs" />
+    <Compile Include="Model\Objects\FeedTag.cs" />
+    <Compile Include="Model\Objects\FeedPostComment.cs" />
+    <Compile Include="Model\Objects\FeedSettings.cs" />
+    <Compile Include="Model\Objects\FeedClimbingPost.cs" />
+    <Compile Include="Model\Objects\Interfaces\IPartnerPageItem.cs" />
+    <Compile Include="Model\Objects\Interfaces\IFeedItem.cs" />
+    <Compile Include="Model\Objects\Interfaces\IUserMessage.cs" />
+    <Compile Include="Model\Objects\PartnerCallSubscription.cs" />
+    <Compile Include="Model\Objects\OutdoorPlaceAuthority.cs" />
+    <Compile Include="Model\Objects\PartnerWidgetStyle..cs" />
+    <Compile Include="Model\Objects\OutdoorCrag.cs" />
+    <Compile Include="Model\Objects\MainNewsFeedItem.cs" />
+    <Compile Include="Model\Objects\SpecialPageHTML.cs" />
+    <Compile Include="Model\Objects\PhotoSet.cs" />
+    <Compile Include="Model\Objects\FeatureArticle.cs" />
+    <Compile Include="Model\Objects\UserMessage.cs" />
+    <Compile Include="Model\Objects\MediaShare.cs" />
+    <Compile Include="Model\Objects\AreaTag.cs" />
+    <Compile Include="Model\Objects\OutdoorPlace.cs" />
+    <Compile Include="Model\Objects\IndoorPlace.cs" />
+    <Compile Include="Model\Objects\ClimberProfile.cs" />
+    <Compile Include="Model\Objects\Feedback.cs" />
+    <Compile Include="Model\Objects\Interfaces\IClimbingPlace.cs" />
+    <Compile Include="Model\Objects\Interfaces\IKeyObject.cs" />
+    <Compile Include="Model\Objects\Interfaces\IOOObject.cs" />
+    <Compile Include="Model\Objects\IOOObject.Extensions.cs" />
+    <Compile Include="Model\Objects\LogEvent.cs" />
+    <Compile Include="Model\Objects\LogExceptionEvent.cs" />
+    <Compile Include="Model\Objects\PartnerCallReply.cs" />
+    <Compile Include="Model\Objects\MessageBoard.cs" />
+    <Compile Include="Model\Objects\MessageBoardMessage.cs" />
+    <Compile Include="Model\Objects\Place.cs" />
+    <Compile Include="Model\Objects\PartnerCall.cs" />
+    <Compile Include="Model\Objects\UserEmailSettings.cs" />
+    <Compile Include="Model\Objects\UserSettings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{C8F2D6AC-F9F4-4E40-A399-22F9A9A5CBD2}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Model\LinqToSqlMapping\ClimbfindLinqModel.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>ClimbfindLinqModel.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Model\LinqToSqlMapping\ClimbfindLinqModel.dbml.layout">
+      <DependentUpon>ClimbfindLinqModel.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Model\LinqToSqlMapping\SiteAdsLinqModel.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>SiteAdsLinqModel.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Model\LinqToSqlMapping\CFFeedLinqModel.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>CFFeedLinqModel.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Model\LinqToSqlMapping\SiteAdsLinqModel.dbml.layout">
+      <DependentUpon>SiteAdsLinqModel.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Model\LinqToSqlMapping\CFFeedLinqModel.dbml.layout">
+      <DependentUpon>CFFeedLinqModel.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

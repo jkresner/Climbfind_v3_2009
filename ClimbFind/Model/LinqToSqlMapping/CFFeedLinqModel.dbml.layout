@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 19.5" name="CFFeedLinqModel">
+  <DataContextMoniker Name="/CFFeedLinqModelDataContext" />
+  <nestedChildShapes>
+    <classShape Id="e2894876-da10-48fb-adf4-9b9b9c567c97" absoluteBounds="6.875, 13.625, 2, 1.5891951497395831">
+      <DataClassMoniker Name="/CFFeedLinqModelDataContext/HomepagePartnerCallSetting" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9973645b-7631-482f-a3b6-24462ef4b4ca" absoluteBounds="6.8900000000000006, 14.085, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="971e009a-9c3b-4a5c-a1e1-299325cebbc6" absoluteBounds="4, 17.375, 2, 1.9178898111979166">
+      <DataClassMoniker Name="/CFFeedLinqModelDataContext/FeedClimbingPost" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2ca79c1e-5233-4029-ae85-25b8962321d3" absoluteBounds="4.0150000000000006, 17.835, 1.9700000000000002, 1.3578898111979165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="329c89bb-b7c9-4b49-bd42-98e142504e43" absoluteBounds="6.75, 17.5, 2, 1.5891951497395844">
+      <DataClassMoniker Name="/CFFeedLinqModelDataContext/FeedPostComment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="54d89213-7ae7-40a4-9a99-1b6aedcb495e" absoluteBounds="6.765, 17.96, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6 : 18.2945975748698); (6.75 : 18.2945975748698)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CFFeedLinqModelDataContext/FeedClimbingPost/FeedClimbingPost_FeedPostComment" />
+      <nodes>
+        <classShapeMoniker Id="971e009a-9c3b-4a5c-a1e1-299325cebbc6" />
+        <classShapeMoniker Id="329c89bb-b7c9-4b49-bd42-98e142504e43" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="9188f8ca-7538-4ae6-9a91-fce4142a6a95" absoluteBounds="1.75, 14.375, 2, 1.4248478190104168">
+      <DataClassMoniker Name="/CFFeedLinqModelDataContext/FeedTag" />
+      <nestedChildShapes>
+        <elementListCompartment Id="84328050-3ad5-447b-83bb-3202485fe6d7" absoluteBounds="1.7650000000000001, 14.835, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 15.7998478190104); (2.75 : 18.333944905599); (4 : 18.333944905599)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/CFFeedLinqModelDataContext/FeedTag/FeedTag_FeedClimbingPost" />
+      <nodes>
+        <classShapeMoniker Id="9188f8ca-7538-4ae6-9a91-fce4142a6a95" />
+        <classShapeMoniker Id="971e009a-9c3b-4a5c-a1e1-299325cebbc6" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="0d71526b-761f-4d8d-b2bb-1dbb1b71f7a5" absoluteBounds="3, 11.75, 2, 2.0822371419270831">
+      <DataClassMoniker Name="/CFFeedLinqModelDataContext/FeedClimberChannelRequest" />
+      <nestedChildShapes>
+        <elementListCompartment Id="631afbab-ecbf-4452-94b0-6525df476c3d" absoluteBounds="3.015, 12.21, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a8cb849d-1ad2-49aa-9931-159256247257" absoluteBounds="4.625, 14.625, 2, 2.0822371419270831">
+      <DataClassMoniker Name="/CFFeedLinqModelDataContext/FeedSetting" />
+      <nestedChildShapes>
+        <elementListCompartment Id="627df235-438a-4e3e-acdf-1c99dcdc2736" absoluteBounds="4.64, 15.085, 1.9700000000000002, 1.5222371419270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.75 : 15.2124239095052); (4.625 : 15.2124239095052)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CFFeedLinqModelDataContext/FeedTag/FeedTag_FeedSetting" />
+      <nodes>
+        <classShapeMoniker Id="9188f8ca-7538-4ae6-9a91-fce4142a6a95" />
+        <classShapeMoniker Id="a8cb849d-1ad2-49aa-9931-159256247257" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

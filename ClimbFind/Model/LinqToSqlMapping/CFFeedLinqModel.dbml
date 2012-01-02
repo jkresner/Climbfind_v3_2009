@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="CFLive07.29" Class="CFFeedLinqModelDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=JKLAP;Initial Catalog=CFLive07.29;Integrated Security=True" SettingsObjectName="ClimbFind.Properties.Settings" SettingsPropertyName="CFLive07_29ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="ClimbFind.HomepagePartnerCallSettings" Member="HomepagePartnerCallSettings">
+    <Type Name="HomepagePartnerCallSetting">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Types" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="ViewBy" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="AreaID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PlaceIDs" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.FeedClimbingPost" Member="FeedClimbingPosts">
+    <Type Name="FeedClimbingPost">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PlaceID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TagID" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="ClimbingDateTime" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PostedDateTime" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Message" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="FeedClimbingPost_FeedPostComment" Member="FeedPostComments" ThisKey="ID" OtherKey="FeedPostID" Type="FeedPostComment" />
+      <Association Name="FeedTag_FeedClimbingPost" Member="FeedTag" ThisKey="TagID" OtherKey="ID" Type="FeedTag" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.FeedPostComment" Member="FeedPostComments">
+    <Type Name="FeedPostComment">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FeedPostID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Message" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="PostedDateTime" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Association Name="FeedClimbingPost_FeedPostComment" Member="FeedClimbingPost" ThisKey="FeedPostID" OtherKey="ID" Type="FeedClimbingPost" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.FeedTag" Member="FeedTags">
+    <Type Name="FeedTag">
+      <Column Name="ID" Type="System.Byte" DbType="TinyInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Category" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Association Name="FeedTag_FeedClimbingPost" Member="FeedClimbingPosts" ThisKey="ID" OtherKey="TagID" Type="FeedClimbingPost" />
+      <Association Name="FeedTag_FeedSetting" Member="FeedSettings" ThisKey="ID" OtherKey="TagID" Type="FeedSetting" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.FeedClimberChannelRequest" Member="FeedClimberChannelRequests">
+    <Type Name="FeedClimberChannelRequest">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="WatchingUserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="WatchedUserID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="RequestedDateTime" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ApprovedDateTime" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="RejectedDateTime" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="WatchingPaused" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="UserBlocked" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="ClimbFind.FeedSettings" Member="FeedSettings">
+    <Type Name="FeedSetting">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AreaID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PlaceID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TagID" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="CurrentChannelType" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="NotifyOnPostComment" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="NotifyOnPostsICommentedOn" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PostPrivacySettings" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="FeedTag_FeedSetting" Member="FeedTag" ThisKey="TagID" OtherKey="ID" Type="FeedTag" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
